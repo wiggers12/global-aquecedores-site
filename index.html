@@ -3,313 +3,769 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Aquecedores - Instalação, Manutenção e Vendas de Aquecedores a Gás</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome (para ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Global Aquecedores | Aquecedores a Gás em Porto Alegre - Instalação e Manutenção</title>
+    <meta name="description" content="Global Aquecedores: Especialistas em instalação, manutenção, conserto e venda de aquecedores a gás em Porto Alegre e região. Segurança e qualidade garantida.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <!-- Google AdSense (script principal) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SEU_ID_CLIENTE_ADSENSE" crossorigin="anonymous"></script>
+
     <style>
+        /* --- Variáveis de Cor e Fontes --- */
+        :root {
+            --cor-azul-escuro: #0D47A1; /* Azul Escuro (confiança, profissionalismo) */
+            --cor-azul-claro: #1A73E8;
+            --cor-amarelo: #FFC107; /* Laranja (calor, energia) */
+            --cor-fundo: #FFFFFF;
+            --cor-fundo-secao: #f4f7f9;
+            --cor-texto: #333333;
+            --cor-texto-claro: #FFFFFF;
+            --cor-borda-card: #e0e0e0; /* Borda sutil para cards */
+
+            --fonte-principal: 'Roboto', sans-serif;
+        }
+
+        /* --- Reset e Globais --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            font-family: var(--fonte-principal);
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
         }
-        /* Estilos personalizados para gradientes e sombras */
-        .bg-gradient-primary {
-            background: linear-gradient(to right, #1a73e8, #4285f4); /* Azul Google */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { color: var(--cor-azul-escuro); }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+
+        /* --- Header / Menu no Topo --- */
+        .header {
+            background-color: var(--cor-branco);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
         }
-        .text-gradient-primary {
-            background: linear-gradient(to right, #1a73e8, #4285f4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .btn-primary {
-            @apply bg-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1;
+        .logo {
+            height: 50px; /* Altura fixa para o logo */
+            width: auto;
+            object-fit: contain; /* Garante que a imagem se ajuste */
         }
-        .btn-secondary {
-            @apply bg-white text-blue-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 border border-blue-600;
+        .nav-links a {
+            color: var(--cor-azul-escuro);
+            margin: 0 15px;
+            font-weight: 500;
+            text-decoration: none;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
         }
-        .card-shadow {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        .nav-links a:hover {
+            color: var(--cor-azul-claro);
+            border-bottom: 2px solid var(--cor-azul-claro);
         }
-        .section-heading {
-            @apply text-4xl font-bold text-gray-800 mb-10 text-center;
+        .header-contato {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--cor-azul-escuro);
         }
-        .ad-placeholder {
-            @apply bg-gray-100 border border-gray-300 text-gray-500 flex items-center justify-center text-sm font-medium;
-            min-height: 90px; /* Altura mínima para anúncios responsivos */
+        .header-contato i {
+            color: var(--cor-amarelo);
+            margin-right: 8px;
         }
-        /* Mobile menu specific styles */
-        .mobile-menu {
+
+        /* Mobile Menu Toggle Button */
+        .menu-toggle {
+            display: none; /* Hidden on desktop */
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--cor-primaria);
+            cursor: pointer;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-nav-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px; /* Width of the mobile menu */
+            height: 100%;
+            background-color: var(--cor-branco);
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+            transform: translateX(100%); /* Start off-screen */
             transition: transform 0.3s ease-out;
-            transform: translateX(100%);
+            z-index: 1000;
+            padding: 20px;
         }
-        .mobile-menu.active {
-            transform: translateX(0);
+
+        .mobile-nav.active {
+            transform: translateX(0); /* Slide in */
+        }
+
+        .mobile-nav .close-btn {
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--cor-primaria);
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+        }
+
+        .mobile-nav ul li a {
+            display: block;
+            padding: 10px 0;
+            color: var(--cor-texto);
+            font-weight: 500;
+            border-bottom: 1px solid #eee;
+        }
+
+        .mobile-nav ul li:last-child a {
+            border-bottom: none;
+        }
+
+
+        /* --- Seção Hero (Principal) --- */
+        #inicio {
+            background: linear-gradient(rgba(13, 43, 78, 0.7), rgba(13, 43, 78, 0.7)), url('IMG-20250721-WA0016.jpg') no-repeat center center/cover;
+            color: var(--cor-texto-claro);
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #inicio h1 {
+            color: var(--cor-texto-claro);
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        #inicio p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+        .cta-button {
+            background-color: var(--cor-amarelo);
+            color: var(--cor-azul-escuro);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #e68900; /* Laranja mais escuro */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        /* --- Padrão de Seção --- */
+        section { padding: 80px 0; }
+        #servicos, #sobre, #depoimentos, #faq { background-color: var(--cor-fundo-secao); } /* Adicionado depoimentos e faq */
+
+        /* --- Seção de Serviços --- */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .servico-card {
+            background: var(--cor-fundo);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .servico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .servico-card i {
+            font-size: 3rem;
+            color: var(--cor-azul-claro);
+            margin-bottom: 20px;
+        }
+
+        /* --- Seção de Marcas Atendidas --- */
+        .marcas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        .marca-logo { 
+            height: 50px; 
+            filter: grayscale(1); 
+            opacity: 0.7; 
+            transition: all 0.3s ease;
+            max-width: 150px; /* Limita o tamanho do logo */
+            object-fit: contain;
+        }
+        .marca-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* --- Seção de Depoimentos --- */
+        #depoimentos .depoimento-card {
+            background: var(--cor-branco);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #depoimentos .depoimento-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--cor-texto);
+        }
+        #depoimentos .depoimento-card .autor {
+            font-weight: bold;
+            color: var(--cor-azul-escuro);
+        }
+        #depoimentos .carrossel-navegacao {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #depoimentos .carrossel-navegacao button {
+            background-color: var(--cor-azul-claro);
+            color: var(--cor-branco);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+        #depoimentos .carrossel-navegacao button:hover {
+            background-color: var(--cor-azul-escuro);
+        }
+
+        /* --- Seção de Certificações --- */
+        #certificacoes {
+            background-color: var(--cor-fundo);
+            padding: 60px 20px;
+        }
+        #certificacoes .cert-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        #certificacoes .cert-logo {
+            height: 80px; /* Tamanho maior para selos */
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(0%); /* Selos coloridos */
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+        #certificacoes .cert-logo:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        /* --- Seção FAQ --- */
+        #faq .faq-item {
+            background: var(--cor-branco);
+            border: 1px solid var(--cor-borda-card);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        #faq .faq-pergunta {
+            padding: 18px 25px;
+            background-color: var(--cor-fundo-secao);
+            color: var(--cor-azul-escuro);
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        #faq .faq-pergunta:hover {
+            background-color: #e9eff3;
+        }
+        #faq .faq-pergunta i {
+            transition: transform 0.3s ease;
+        }
+        #faq .faq-pergunta.active i {
+            transform: rotate(180deg);
+        }
+        #faq .faq-resposta {
+            padding: 15px 25px;
+            background-color: var(--cor-branco);
+            color: var(--cor-texto);
+            display: none; /* Hidden by default */
+            border-top: 1px solid var(--cor-borda-card);
+        }
+
+        /* --- Seção de Contato --- */
+        #contato .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start; 
+        }
+
+        .contact-info i {
+            color: var(--cor-primaria);
+            margin-right: 15px;
+            width: 25px; 
+            text-align: center;
+            font-size: 1.3rem; 
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--fonte-principal);
+            font-size: 1rem;
+            color: var(--cor-texto);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--cor-secundaria);
+            box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--cor-primaria);
+            color: var(--cor-branco);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--cor-destaque);
+        }
+
+        .map-placeholder {
+            background-color: #cccccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: 300px; 
+            margin-top: 40px;
+            width: 100%;
+        }
+        .map-placeholder iframe { /* Estilo para o iframe do mapa */
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+        /* --- Rodapé (Footer) --- */
+        .footer {
+            background-color: var(--cor-azul-escuro);
+            color: var(--cor-texto-claro);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer .footer-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--cor-branco);
+            margin-bottom: 15px;
+        }
+
+        .footer .social-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--cor-branco);
+            font-size: 1.8rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--cor-secundaria);
+            transform: translateY(-3px);
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-text a {
+            color: var(--cor-branco);
+            text-decoration: underline;
+        }
+        .footer-text a:hover {
+            color: var(--cor-secundaria);
+        }
+
+        /* --- Botão Flutuante do WhatsApp --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366; /* Verde WhatsApp */
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* Círculo */
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- AdSense Placeholder Styles --- */
+        .ad-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px; /* Altura mínima para o bloco de anúncio */
+            background-color: #f0f0f0; /* Um fundo neutro para o placeholder */
+            border: 1px dashed #ccc; /* Borda tracejada para indicar o placeholder */
+            margin: 40px auto; /* Espaçamento */
+            max-width: 90%; /* Largura máxima */
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+
+        /* --- Responsividade --- */
+        @media (max-width: 992px) {
+            .header-contato { display: none; }
+            .nav-links { display: none; } /* Esconde desktop nav */
+            .menu-toggle { display: block; } /* Mostra botão de toggle */
+            .header .container { justify-content: space-between; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            #inicio h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .map-placeholder { height: 250px; } /* Ajuste de altura para mobile */
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            #inicio h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            #inicio p { font-size: 1rem; }
+            .cta-button { font-size: 1rem; padding: 12px 25px; }
+            .logo { height: 40px; }
+            section { padding: 40px 15px; }
+            .grid { gap: 20px; }
+            .servico-card, .card { padding: 20px; }
+            .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
         }
     </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
-    <header class="w-full bg-white shadow-md p-4 fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-blue-600">
-                <!-- Mantido placeholder para o logo, pois as imagens enviadas são de produtos/serviços com texto. -->
-                <img src="https://placehold.co/150x50/1a73e8/ffffff?text=Global+Aquecedores" alt="Logo Global Aquecedores" class="h-12 w-auto rounded-md">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#inicio" class="logo-link">
+                <!-- LOGO DA EMPRESA: Usando a nova logo enviada -->
+                <img src="maicom aquecedores.jpg" alt="Logo Global Aquecedores" class="logo">
             </a>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Início</a>
-                <a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Serviços</a>
-                <a href="#produtos" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Produtos</a>
-                <a href="#marcas" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Marcas</a>
-                <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Contato</a>
+            <nav class="nav-links">
+                <a href="#servicos">Serviços</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#marcas">Marcas</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contato">Contato</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+            <div class="header-contato">
+                <i class="fa-solid fa-phone"></i>
+                <span>(51) 98551-9090</span>
+            </div>
+            <button class="menu-toggle" id="menu-toggle-btn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
-    <nav id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 z-50 md:hidden">
-        <div class="flex justify-end mb-8">
-            <button id="close-mobile-menu-button" class="text-gray-700 text-2xl focus:outline-none">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="space-y-6">
-            <li><a href="#home" class="block text-gray-800 hover:text-blue-600 font-medium text-lg py-2 mobile-menu-link">Início</a></li>
-            <li><a href="#servicos" class="block text-gray-800 hover:text-blue-600 font-medium text-lg py-2 mobile-menu-link">Serviços</a></li>
-            <li><a href="#produtos" class="block text-gray-800 hover:text-blue-600 font-medium text-lg py-2 mobile-menu-link">Produtos</a></li>
-            <li><a href="#marcas" class="block text-gray-800 hover:text-blue-600 font-medium text-lg py-2 mobile-menu-link">Marcas</a></li>
-            <li><a href="#contato" class="block text-gray-800 hover:text-blue-600 font-medium text-lg py-2 mobile-menu-link">Contato</a></li>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav">
+        <button class="close-btn" id="close-mobile-nav-btn"><i class="fas fa-times"></i></button>
+        <ul>
+            <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+            <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+            <li><a href="#produtos" class="mobile-nav-link">Produtos</a></li>
+            <li><a href="#marcas" class="mobile-nav-link">Marcas</a></li>
+            <li><a href="#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
+            <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+            <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('IMG-20250721-WA0016.jpg');">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-        <div class="container mx-auto text-center z-10 p-4">
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                Conforto e Segurança com Aquecedores a Gás de Alta Performance
-            </h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
-                A Global Aquecedores é especialista em instalação, manutenção e venda de aquecedores a gás para sua casa ou empresa.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up animate-delay-400">
-                <a href="#contato" class="btn-primary">
-                    <i class="fas fa-clipboard-list mr-2"></i> Solicite um Orçamento
-                </a>
-                <a href="tel:+5551985519090" class="btn-secondary">
-                    <i class="fas fa-phone mr-2"></i> Ligue Agora: (51) 98551-9090
-                </a>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="inicio">
+            <h1>Aquecedores a Gás em Porto Alegre</h1>
+            <p>Serviços de instalação, manutenção e reparos com técnicos certificados. Sua segurança e conforto em primeiro lugar.</p>
+            <a href="https://wa.me/5551985519090" target="_blank" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Peça um Orçamento Grátis
+            </a>
+        </section>
 
-    <!-- About Us Section -->
-    <section id="sobre" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Sobre a Global Aquecedores</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <!-- Usando a mesma imagem do hero, pois é uma boa imagem geral da empresa/serviços -->
-                    <img src="IMG-20250721-WA0016.jpg" alt="Nossa Equipe da Global Aquecedores" class="rounded-lg shadow-lg w-full h-auto object-cover">
-                </div>
-                <div class="md:w-1/2 text-lg leading-relaxed">
-                    <p class="mb-4">
-                        Com anos de experiência no mercado de aquecedores a gás, a **Global Aquecedores**, liderada por Michael Machado, é a sua escolha ideal para soluções completas. Nossa missão é proporcionar conforto, segurança e eficiência energética para residências e empresas, com um atendimento de excelência e técnicos altamente qualificados.
-                    </p>
-                    <p class="mb-4">
-                        Valorizamos a transparência, a pontualidade e a qualidade em cada serviço prestado. Trabalhamos apenas com as melhores marcas e seguimos rigorosamente todas as normas de segurança para garantir a sua tranquilidade.
-                    </p>
-                    <p>
-                        Conte com a expertise da Global Aquecedores para instalação, manutenção preventiva, reparos emergenciais e conversão de gás. Sua satisfação é a nossa prioridade!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- AdSense Placeholder 1 -->
+        <section class="ad-section container">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-SEU_ID_CLIENTE_ADSENSE"
+                 data-ad-slot="SEU_SLOT_ID_1"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
 
-    <!-- AdSense Placeholder 1 -->
-    <div class="container mx-auto my-8 p-4 bg-gray-100 rounded-lg shadow-inner ad-placeholder">
-        <ins class="adsbygoogle"
-             style="display:block; text-align:center;"
-             data-ad-layout="in-article"
-             data-ad-format="fluid"
-             data-ad-client="ca-pub-SEU_ID_CLIENTE_ADSENSE"
-             data-ad-slot="SEU_SLOT_ID_1"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <!-- Services Section -->
-    <section id="servicos" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Nossos Serviços</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-wrench"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Instalação Profissional</h3>
-                    <p class="text-gray-600">A Global Aquecedores instala seu aquecedor a gás com total segurança e conforme as normas técnicas.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Manutenção Preventiva</h3>
-                    <p class="text-gray-600">Garanta a vida útil do seu equipamento com a manutenção periódica da Global Aquecedores.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-fire-extinguisher"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Reparos e Emergências</h3>
-                    <p class="text-gray-600">Atendimento rápido e eficiente para qualquer problema com seu aquecedor, pela Global Aquecedores.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-exchange-alt"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Conversão de Gás</h3>
-                    <p class="text-gray-600">A Global Aquecedores realiza a conversão de gás natural para GLP e vice-versa com segurança.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="produtos" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Nossos Produtos</h2>
-            <p class="text-center text-lg mb-10 max-w-2xl mx-auto text-gray-600">
-                A Global Aquecedores oferece uma ampla variedade de aquecedores a gás, das melhores marcas do mercado, para atender às suas necessidades de aquecimento de água com eficiência e economia.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <img src="IMG-20250721-WA0014.jpg" alt="Aquecedor Komeco 16 WH Home" class="w-full h-48 object-cover mb-4 rounded-md">
-                    <h3 class="text-xl font-semibold mb-2">Komeco 16 WH Home</h3>
-                    <p class="text-gray-600 text-sm">Painel Digital, Acendimento Automático, Exaustão Forçada. Valor com instalação inclusa.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <img src="IMG-20250721-WA0015.jpg" alt="Aquecedor Komeco 21 D Home" class="w-full h-48 object-cover mb-4 rounded-md">
-                    <h3 class="text-xl font-semibold mb-2">Komeco 21 D Home</h3>
-                    <p class="text-gray-600 text-sm">Bivolt, Acendimento Automático, Sensor de Chama, Exaustão Forçada. Valor com instalação inclusa.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-shadow text-center">
-                    <img src="IMG-20250721-WA0017.jpg" alt="Aquecedor Komeco 26 WH Home" class="w-full h-48 object-cover mb-4 rounded-md">
-                    <h3 class="text-xl font-semibold mb-2">Komeco 26 WH Home</h3>
-                    <p class="text-gray-600 text-sm">Bivolt Automático, Acendimento Automático, Sensor de Chama, Função Solar. Valor com instalação inclusa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Brands Section -->
-    <section id="marcas" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Marcas que a Global Aquecedores Trabalha</h2>
-            <p class="text-center text-lg mb-10 max-w-2xl mx-auto text-gray-600">
-                A Global Aquecedores tem parceria com os maiores nomes do mercado para oferecer a você o que há de melhor em aquecimento a gás.
-            </p>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center">
-                <!-- Mantidos placeholders para logos de marcas, pois as imagens enviadas são de produtos específicos. -->
-                <img src="https://placehold.co/150x80/cccccc/333333?text=Marca+A" alt="Logo Marca A" class="w-full h-auto object-contain filter grayscale hover:grayscale-0 transition duration-300 rounded-md">
-                <img src="https://placehold.co/150x80/cccccc/333333?text=Marca+B" alt="Logo Marca B" class="w-full h-auto object-contain filter grayscale hover:grayscale-0 transition duration-300 rounded-md">
-                <img src="https://placehold.co/150x80/cccccc/333333?text=Marca+C" alt="Logo Marca C" class="w-full h-auto object-contain filter grayscale hover:grayscale-0 transition duration-300 rounded-md">
-                <img src="https://placehold.co/150x80/cccccc/333333?text=Marca+D" alt="Logo Marca D" class="w-full h-auto object-contain filter grayscale hover:grayscale-0 transition duration-300 rounded-md">
-                <img src="https://placehold.co/150x80/cccccc/333333?text=Marca+E" alt="Logo Marca E" class="w-full h-auto object-contain filter grayscale hover:grayscale-0 transition duration-300 rounded-md">
-            </div>
-        </div>
-    </section>
-
-    <!-- AdSense Placeholder 2 -->
-    <div class="container mx-auto my-8 p-4 bg-gray-100 rounded-lg shadow-inner ad-placeholder">
-        <ins class="adsbygoogle"
-             style="display:block; text-align:center;"
-             data-ad-layout="in-article"
-             data-ad-format="fluid"
-             data-ad-client="ca-pub-SEU_ID_CLIENTE_ADSENSE"
-             data-ad-slot="SEU_SLOT_ID_2"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <!-- Benefits/Differentiators Section -->
-    <section id="diferenciais" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Por Que Escolher a Global Aquecedores?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Segurança em Primeiro Lugar</h3>
-                    <p class="text-gray-600">Todos os nossos serviços seguem rigorosas normas de segurança.</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-star"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Qualidade Garantida</h3>
-                    <p class="text-gray-600">Trabalhamos com produtos e serviços de alta qualidade para sua satisfação.</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md card-shadow text-center">
-                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-user-tie"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Técnicos Especializados</h3>
-                    <p class="text-gray-600">Nossa equipe é formada por profissionais certificados e experientes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contato" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Fale Conosco</h2>
-            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12">
-                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md card-shadow w-full max-w-md mb-8 md:mb-0">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Solicite seu Orçamento Grátis</h3>
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
-                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Seu nome completo">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="seu.email@exemplo.com">
-                        </div>
-                        <div class="mb-4">
-                            <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Telefone:</label>
-                            <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-500" placeholder="(XX) XXXXX-XXXX">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
-                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Descreva sua necessidade..."></textarea>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button type="submit" class="btn-primary w-full">
-                                <i class="fas fa-paper-plane mr-2"></i> Enviar Orçamento
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Informações de Contato</h3>
-                    <p class="text-lg mb-3"><i class="fas fa-phone-alt text-blue-600 mr-3"></i> Telefone: (51) 98551-9090</p>
-                    <p class="text-lg mb-3"><i class="fab fa-whatsapp text-green-500 mr-3"></i> WhatsApp: (51) 98551-9090</p>
-                    <p class="text-lg mb-3"><i class="fas fa-envelope text-blue-600 mr-3"></i> Email: contato@globalaquecedores.com.br</p>
-                    <p class="text-lg mb-3"><i class="fas fa-map-marker-alt text-red-500 mr-3"></i> Endereço: Rua Exemplo, 123 - Bairro, Cidade - RS</p>
-                    <p class="text-lg mb-3"><i class="fas fa-clock text-gray-600 mr-3"></i> Horário de Atendimento: Seg-Sex: 8h-18h</p>
-                    <!-- Google Maps Placeholder -->
-                    <div class="mt-8 bg-gray-200 rounded-lg overflow-hidden shadow-md" style="height: 250px;">
-                        <!-- Usando a imagem com o logo e serviços como placeholder para o mapa -->
-                        <img src="IMG-20250721-WA0016.jpg" alt="Mapa de Localização da Global Aquecedores" class="w-full h-full object-cover">
+        <section id="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Instalação Profissional</h3>
+                        <p>Instalação de aquecedores a gás de todas as marcas, seguindo as mais rigorosas normas de segurança.</p>
+                    </div>
+                    <div class="servico-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Manutenção Preventiva</h3>
+                        <p>Evite problemas futuros e garanta a eficiência e segurança do seu equipamento com nossa revisão completa.</p>
+                    </div>
+                    <div class="servico-card">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Conserto de Aquecedores</h3>
+                        <p>Nossa equipe técnica é especializada para diagnosticar e resolver qualquer problema no seu aquecedor de forma rápida.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="marcas">
+            <div class="container">
+                <h2>Trabalhamos com as Melhores Marcas</h2>
+                <div class="marcas-grid">
+                    <!-- LOGOS DAS MARCAS: Substitua estas imagens placeholder pelos logos reais das marcas. -->
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Rheem" alt="Logo Rheem" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Rinnai" alt="Logo Rinnai" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Lorenzetti" alt="Logo Lorenzetti" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Bosch" alt="Logo Bosch" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Komeco" alt="Logo Komeco" class="marca-logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos/Testemunhos (NOVA SEÇÃO) -->
+        <section id="depoimentos">
+            <div class="container">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <div class="depoimento-card">
+                    <p>"Serviço excelente e rápido! Meu aquecedor voltou a funcionar perfeitamente. Recomendo a Global Aquecedores!"</p>
+                    <div class="autor">- Ana Paula, Porto Alegre</div>
+                </div>
+                <div class="depoimento-card">
+                    <p>"Técnicos muito atenciosos e profissionais. Resolveram meu problema de forma eficiente e com preço justo."</p>
+                    <div class="autor">- Carlos Eduardo, Canoas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Certificações e Autorizações (NOVA SEÇÃO) -->
+        <section id="certificacoes">
+            <div class="container">
+                <h2>Certificações e Autorizações</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Nossa equipe é certificada e autorizada pelas principais entidades e fabricantes do setor, garantindo a máxima segurança e qualidade em todos os serviços.</p>
+                <div class="cert-grid">
+                    <!-- Substitua estas imagens placeholder pelos selos reais -->
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=ABNT" alt="Selo ABNT" class="cert-logo">
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=INMETRO" alt="Selo INMETRO" class="cert-logo">
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=Fabricante+X" alt="Autorizado Fabricante X" class="cert-logo">
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=Fabricante+Y" alt="Autorizado Fabricante Y" class="cert-logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção FAQ (NOVA SEÇÃO) -->
+        <section id="faq">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        O que é um aquecedor a gás? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        É um equipamento que utiliza gás (GN ou GLP) para aquecer a água que será utilizada em chuveiros, torneiras e outros pontos da residência.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        Qual a importância da manutenção preventiva? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        A manutenção preventiva garante a segurança, prolonga a vida útil do aparelho, otimiza o consumo de gás e evita falhas inesperadas.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        Vocês atendem em toda a Região Metropolitana de Porto Alegre? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        Sim, a Global Aquecedores atende não apenas Porto Alegre, mas também toda a região metropolitana. Entre em contato para verificar a disponibilidade em sua localidade.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense Placeholder 2 -->
+        <section class="ad-section container">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-SEU_ID_CLIENTE_ADSENSE"
+                 data-ad-slot="SEU_SLOT_ID_2"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+        
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Precisa de um orçamento ou tem alguma dúvida? Fale conosco agora mesmo pelo WhatsApp ou ligue. Estamos prontos para atender você!</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fas fa-phone-alt"></i> (51) 98551-9090 (Michael Machado)</p>
+                        <p><a href="https://wa.me/5551985519090" target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
+                        <p><i class="fas fa-envelope"></i> contato@globalaquecedores.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Lindomar dos Reis, 191, Jardim Itu, Porto Alegre - RS, CEP 91225-320</p>
+                        <p><i class="fas fa-clock"></i> Horário de Atendimento: Seg-Sex: 8h-20h</p>
+                        <p><i class="fas fa-id-card"></i> CNPJ: 54.806.216/0001-78</p>
+                        <br>
+                        <p><strong>Solicite seu orçamento sem compromisso. Estamos prontos para atender você!</strong></p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Ou envie uma mensagem</h3>
+                        <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                            <input type="email" name="email" placeholder="Seu E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <input type="tel" name="phone" placeholder="(XX) XXXXX-XXXX" required pattern="\(\d{2}\)\s\d{5}-\d{4}">
+                            <textarea name="message" rows="5" placeholder="Sua Mensagem (Ex: Gostaria de um orçamento para manutenção)" required></textarea>
+                            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <!-- GOOGLE MAPS: Iframe real do Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.883712345678!2d-51.1234567!3d-30.0123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519782d4f2a2f2f%3A0x9519782d4f2a2f2f!2sRua+Lindomar+dos+Reis%2C+191+-+Jardim+Itu%2C+Porto+Alegre+-+RS%2C+91225-320!5e0!3m2!1spt-BR!2sbr!4v1678901234567!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- AdSense Placeholder 3 -->
-    <div class="container mx-auto my-8 p-4 bg-gray-100 rounded-lg shadow-inner ad-placeholder">
+    <section class="ad-section container">
         <ins class="adsbygoogle"
              style="display:block; text-align:center;"
              data-ad-layout="in-article"
@@ -319,87 +775,156 @@
         <script>
              (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="w-full bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div class="mb-4 md:mb-0">
-                    <a href="#home" class="text-xl font-bold text-blue-400 hover:text-blue-300">Global Aquecedores</a>
-                    <p class="text-sm text-gray-400 mt-2">Soluções completas em aquecedores a gás.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-facebook-f text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200"><i class="fab fa-linkedin-in text-xl"></i></a>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-6 text-sm text-gray-400">
-                <p>&copy; <span id="current-year"></span> Global Aquecedores. Todos os direitos reservados.</p>
-                <p class="mt-2">Desenvolvido por <a href="https://seusite.com" class="text-blue-400 hover:underline">Valentim</a></p>
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#inicio" class="footer-brand-link">
+                <!-- LOGO DA EMPRESA NO RODAPÉ: Usando a nova logo enviada -->
+                <img src="maicom aquecedores.jpg" alt="Logo Global Aquecedores" class="logo" style="filter: invert(100%);"> <!-- Invertido para fundo escuro -->
+            </a>
+            <div class="social-links">
+                <a href="https://facebook.com/GlobaAquecedores" target="_blank" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/global_aquecedores1" target="_blank" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5551985519090" target="_blank" aria-label="WhatsApp" title="Fale conosco no WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
+        <p class="footer-text">&copy; <span id="current-year"></span> Global Aquecedores. Todos os direitos reservados.</p>
+        <p class="footer-text">Desenvolvido por <a href="https://seusite.com" target="_blank">Valentim Wiggers</a></p>
     </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5551985519090" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
                 // Close mobile menu if open
-                if (mobileMenu.classList.contains('active')) {
-                    mobileMenu.classList.remove('active');
-                    mobileMenuOverlay.classList.add('hidden');
+                const mobileNav = document.getElementById('mobile-nav');
+                const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+                if (mobileNav && mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
                 }
             });
         });
 
         // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const closeMobileMenuButton = document.getElementById('close-mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const closeMobileNavBtn = document.getElementById('close-mobile-nav-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            mobileMenuOverlay.classList.remove('hidden');
-        });
+        if (menuToggleBtn) {
+            menuToggleBtn.addEventListener('click', () => {
+                if (mobileNav) mobileNav.classList.add('active');
+                if (mobileNavOverlay) mobileNavOverlay.style.display = 'block';
+            });
+        }
 
-        closeMobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            mobileMenuOverlay.classList.add('hidden');
-        });
+        if (closeMobileNavBtn) {
+            closeMobileNavBtn.addEventListener('click', () => {
+                if (mobileNav) mobileNav.classList.remove('active');
+                if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
+            });
+        }
 
-        mobileMenuOverlay.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            mobileMenuOverlay.classList.add('hidden');
-        });
+        if (mobileNavOverlay) {
+            mobileNavOverlay.addEventListener('click', () => {
+                if (mobileNav) mobileNav.classList.remove('active');
+                if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
+            });
+        }
 
-        mobileMenuLinks.forEach(link => {
+        mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.classList.add('hidden');
+                if (mobileNav) mobileNav.classList.remove('active');
+                if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
             });
         });
 
         // Update current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const currentYearSpan = document.getElementById('current-year');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
 
         // Basic form submission (for demonstration, you'd need a backend for real submission)
-        document.querySelector('#contato form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Formulário enviado! (Esta é uma demonstração. Em um site real, os dados seriam enviados para um servidor.)');
-            this.reset(); // Clear the form
+        const contactForm = document.querySelector('#contato form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Basic validation
+                const name = this.querySelector('input[name="name"]').value;
+                const email = this.querySelector('input[name="email"]').value;
+                const phone = this.querySelector('input[name="phone"]').value;
+                const message = this.querySelector('textarea[name="message"]').value;
+
+                if (!name || !email || !phone || !message) {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                    return;
+                }
+                if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
+                    alert('Por favor, insira um endereço de e-mail válido.');
+                    return;
+                }
+                // Basic phone pattern check, adjust as needed for specific formats
+                if (!/^\(\d{2}\)\s\d{5}-\d{4}$/.test(phone)) {
+                    alert('Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.');
+                    return;
+                }
+
+
+                alert('Formulário enviado! (Esta é uma demonstração. Em um site real, os dados seriam enviados para um servidor, como o Formspree.io)');
+                this.reset(); // Clear the form
+            });
+        }
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
+            pergunta.addEventListener('click', () => {
+                const resposta = pergunta.nextElementSibling;
+                const icon = pergunta.querySelector('i');
+
+                // Close all other open answers
+                document.querySelectorAll('.faq-resposta').forEach(otherResposta => {
+                    if (otherResposta !== resposta && otherResposta.style.display === 'block') {
+                        otherResposta.style.display = 'none';
+                        otherResposta.previousElementSibling.classList.remove('active');
+                        otherResposta.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current answer
+                if (resposta.style.display === 'block') {
+                    resposta.style.display = 'none';
+                    pergunta.classList.remove('active');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    resposta.style.display = 'block';
+                    pergunta.classList.add('active');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
         });
 
         // AdSense push for initial load (if not already pushed by the async script)
         // This is often handled automatically by the async script, but can be useful for dynamic content.
-        // (adsbygoogle = window.adsbygoogle || []).push({});
+        // if (window.adsbygoogle) {
+        //     (adsbygoogle = window.adsbygoogle || []).push({});
+        // }
     </script>
 </body>
 </html>
