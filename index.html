@@ -16,15 +16,18 @@
 
     <style>
         :root {
-            --cor-azul-escuro: #0D2B4E;
-            --cor-azul-claro: #1A73E8;
-            --cor-amarelo: #FFC107;
+            --cor-azul-escuro: #0a2540; /* Um azul mais profundo e moderno */
+            --cor-azul-claro: #007bff; /* Um azul mais vibrante */
+            --cor-amarelo: #ffc107;
+            --cor-dourado: #ffb300;
             --cor-fundo: #FFFFFF;
-            --cor-fundo-secao: #f4f7f9;
-            --cor-texto: #333333;
+            --cor-fundo-secao: #f8f9fa; /* Um cinza um pouco mais claro */
+            --cor-texto: #343a40;
             --cor-texto-claro: #FFFFFF;
-            --cor-borda-card: #e0e0e0;
+            --cor-borda-card: #dee2e6;
             --fonte-principal: 'Roboto', sans-serif;
+            --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.07);
+            --sombra-card-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,16 +36,17 @@
             font-family: var(--fonte-principal);
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
-            line-height: 1.6;
+            line-height: 1.7; /* Aumenta o espaçamento entre linhas para melhor leitura */
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        h1, h2, h3 { color: var(--cor-azul-escuro); }
-        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; }
-        h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        h1, h2, h3 { color: var(--cor-azul-escuro); font-weight: 700; }
+        h2 { font-size: 2.8rem; text-align: center; margin-bottom: 60px; font-weight: 900; }
+        h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
         .header {
-            background-color: var(--cor-fundo);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             padding: 15px 0;
             position: sticky; top: 0; z-index: 1000;
         }
@@ -50,10 +54,22 @@
         .logo { height: 50px; width: auto; object-fit: contain; }
         .nav-links a {
             color: var(--cor-azul-escuro); margin: 0 15px; font-weight: 500;
-            text-decoration: none; padding-bottom: 5px;
-            border-bottom: 2px solid transparent; transition: all 0.3s ease;
+            text-decoration: none; padding: 8px 0;
+            position: relative; transition: color 0.3s ease;
         }
-        .nav-links a:hover { color: var(--cor-azul-claro); border-bottom-color: var(--cor-azul-claro); }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--cor-azul-claro);
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--cor-azul-claro); }
+        .nav-links a:hover::after { width: 100%; left: 0; }
+
         .header-contato { display: flex; align-items: center; font-weight: 700; font-size: 1.1rem; color: var(--cor-azul-escuro); }
         .header-contato i { color: var(--cor-amarelo); margin-right: 8px; }
         
@@ -63,104 +79,109 @@
         .mobile-nav.active { transform: translateX(0); }
         .mobile-nav .close-btn { font-size: 1.8rem; background: none; border: none; color: var(--cor-azul-escuro); cursor: pointer; display: block; margin-left: auto; margin-bottom: 20px; }
         .mobile-nav ul { list-style: none; }
-        .mobile-nav ul li a { display: block; padding: 10px 0; color: var(--cor-texto); font-weight: 500; text-decoration: none; border-bottom: 1px solid #eee; }
+        .mobile-nav ul li a { display: block; padding: 15px 0; color: var(--cor-texto); font-weight: 500; text-decoration: none; border-bottom: 1px solid #eee; }
         
         #inicio {
-            padding: 80px 20px; min-height: 90vh;
-            display: flex; align-items: center;
+            padding: 80px 0; min-height: 90vh;
+            display: flex; align-items: center; background-color: var(--cor-fundo-secao);
         }
-        .hero-container {
-            display: grid; grid-template-columns: 1fr 1fr;
-            align-items: center; gap: 40px;
-        }
-        .hero-text h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
-        .hero-text p { font-size: 1.2rem; max-width: 500px; margin-bottom: 30px; }
+        .hero-container { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+        .hero-text h1 { font-size: 3.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
+        .hero-text p { font-size: 1.2rem; max-width: 500px; margin-bottom: 40px; color: #555; }
         .hero-logo { text-align: center; }
-        .hero-logo img { max-width: 100%; height: auto; border-radius: 20px; }
+        .hero-logo img { max-width: 100%; height: auto; border-radius: 20px; box-shadow: var(--sombra-card-hover); }
+        
         .cta-button {
-            background-color: var(--cor-amarelo); color: var(--cor-azul-escuro);
-            padding: 15px 30px; border-radius: 50px;
+            background: linear-gradient(45deg, var(--cor-amarelo), var(--cor-dourado));
+            color: var(--cor-azul-escuro);
+            padding: 18px 35px; border-radius: 50px;
             font-size: 1.2rem; font-weight: bold; text-decoration: none;
             display: inline-flex; align-items: center; justify-content: center;
-            gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            gap: 12px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+            border: none;
         }
-        .cta-button:hover { background-color: #e68900; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .cta-button:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 193, 7, 0.5); }
 
-        section { padding: 80px 0; }
+        section { padding: 100px 0; }
         #servicos, #produtos, #sobre, #depoimentos, #faq { background-color: var(--cor-fundo-secao); }
 
         .card {
-            background: var(--cor-fundo); border-radius: 12px;
+            background: var(--cor-fundo); border-radius: 16px;
             padding: 0; text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;
+            box-shadow: var(--sombra-card);
+            transition: all 0.3s ease;
             height: 100%; overflow: hidden;
         }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .card-image { width: 100%; height: 200px; object-fit: cover; background-color: #eee; }
+        .card:hover { transform: scale(1.03); box-shadow: var(--sombra-card-hover); }
+        .card-image { width: 100%; height: 220px; object-fit: cover; background-color: #eee; }
         .card-content { padding: 30px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         
-        /* Estilos para cards de produto */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .product-card { background: var(--cor-fundo); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .product-card { background: var(--cor-fundo); border-radius: 16px; box-shadow: var(--sombra-card); transition: all 0.3s ease; overflow: hidden; display: flex; flex-direction: column; }
+        .product-card:hover { transform: scale(1.03); box-shadow: var(--sombra-card-hover); }
         .product-card img { width: 100%; height: auto; }
-        .product-card-content { padding: 20px; text-align: left; flex-grow: 1; display: flex; flex-direction: column;}
+        .product-card-content { padding: 25px; text-align: left; flex-grow: 1; display: flex; flex-direction: column;}
         .product-card-content h3 { font-size: 1.8rem; margin-bottom: 15px; text-align: center; }
-        .product-card-content .price-container { margin: 20px 0; text-align: center; }
-        .product-card-content .price-item { display: inline-block; padding: 0 15px; }
+        .product-card-content .price-container { margin: 20px 0; text-align: center; display: flex; justify-content: center; gap: 30px; }
+        .product-card-content .price-item { display: inline-block; padding: 0 15px; border-left: 1px solid var(--cor-borda-card); }
+        .product-card-content .price-item:first-child { border-left: none; }
         .product-card-content .price-label { font-size: 0.9rem; color: var(--cor-texto); }
-        .product-card-content .price-value { font-size: 1.8rem; font-weight: 700; color: var(--cor-azul-escuro); }
+        .product-card-content .price-value { font-size: 1.8rem; font-weight: 700; color: var(--cor-azul-claro); }
         .product-card-content .install-info { font-size: 0.8rem; text-align: center; color: #666; margin-top: auto; padding-top: 15px; }
 
         .marcas-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; }
-        .marca-logo { height: 50px; filter: grayscale(1); opacity: 0.7; transition: all 0.3s ease; max-width: 150px; object-fit: contain; }
+        .marca-logo { height: 50px; filter: grayscale(1); opacity: 0.6; transition: all 0.3s ease; max-width: 150px; object-fit: contain; }
         .marca-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
 
         #depoimentos .card { padding: 30px; }
-        #depoimentos .card p { font-style: italic; margin-bottom: 15px; }
-        #depoimentos .card .autor { font-weight: bold; color: var(--cor-azul-escuro); }
+        #depoimentos .card p { font-style: italic; margin-bottom: 15px; font-size: 1.1rem; }
+        #depoimentos .card .autor { font-weight: bold; color: var(--cor-azul-claro); }
         
         #certificacoes { background-color: var(--cor-fundo); }
         #certificacoes .cert-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; margin-top: 40px; }
         #certificacoes .cert-logo { height: 80px; width: auto; object-fit: contain; opacity: 0.9; transition: all 0.3s ease; }
         
-        #faq .faq-item { background: var(--cor-fundo); border: 1px solid var(--cor-borda-card); border-radius: 8px; margin-bottom: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        #faq .faq-pergunta { padding: 18px 25px; color: var(--cor-azul-escuro); font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        #faq .faq-item { background: var(--cor-fundo); border: 1px solid var(--cor-borda-card); border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: var(--sombra-card); }
+        #faq .faq-pergunta { padding: 20px 25px; color: var(--cor-azul-escuro); font-weight: 500; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         #faq .faq-pergunta i { transition: transform 0.3s ease; }
-        #faq .faq-pergunta.active i { transform: rotate(180deg); }
-        #faq .faq-resposta { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        #faq .faq-resposta p { padding: 0 25px 20px; text-align: left; }
+        #faq .faq-pergunta.active i { transform: rotate(180deg); color: var(--cor-azul-claro); }
+        #faq .faq-resposta { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+        #faq .faq-resposta p { padding: 0 25px 25px; text-align: left; }
         
-        #contato .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: flex-start; }
-        .contact-info p { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: flex-start; text-align: left; }
+        #contato .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: flex-start; }
+        .contact-info p { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: flex-start; text-align: left; }
         .contact-info i { color: var(--cor-azul-claro); margin-right: 15px; width: 25px; text-align: center; font-size: 1.3rem; margin-top: 4px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-family: var(--fonte-principal); font-size: 1rem; }
-        .btn-submit { width: 100%; padding: 15px; background-color: var(--cor-azul-claro); color: var(--cor-fundo); border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; }
-        .btn-submit:hover { background-color: var(--cor-azul-escuro); }
-        .map-placeholder { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); height: 300px; margin-top: 40px; width: 100%; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid var(--cor-borda-card); border-radius: 8px; font-family: var(--fonte-principal); font-size: 1rem; transition: all 0.3s ease; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--cor-azul-claro); box-shadow: 0 0 8px rgba(26, 115, 232, 0.2); }
+        .btn-submit { width: 100%; padding: 15px; background: linear-gradient(45deg, var(--cor-azul-claro), var(--cor-azul-escuro)); color: var(--cor-texto-claro); border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease; }
+        .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3); }
+        .map-placeholder { border-radius: 12px; overflow: hidden; box-shadow: var(--sombra-card); height: 400px; margin-top: 40px; width: 100%; }
         .map-placeholder iframe { width: 100%; height: 100%; border: 0; }
 
-        .footer { background-color: var(--cor-azul-escuro); color: var(--cor-texto-claro); text-align: center; padding: 40px 20px; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; max-width: 1200px; margin: 0 auto 20px auto; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); }
+        .footer { background-color: var(--cor-azul-escuro); color: var(--cor-texto-claro); text-align: center; padding: 50px 20px; }
+        .footer-content { display: flex; flex-direction: column; align-items: center; max-width: 1200px; margin: 0 auto 20px auto; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .footer .social-links { margin-top: 15px; display: flex; gap: 20px; }
         .social-links a { color: var(--cor-texto-claro); font-size: 1.8rem; transition: color 0.3s ease, transform 0.3s ease; }
         .social-links a:hover { color: var(--cor-amarelo); transform: translateY(-3px); }
-        .footer-text { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; }
+        .footer-text { margin-top: 30px; font-size: 0.9rem; opacity: 0.7; }
         .footer-text a { color: var(--cor-texto-claro); text-decoration: underline; }
         
         .whatsapp-float {
             position: fixed; bottom: 30px; right: 30px;
             background-color: #25D366; color: white;
             width: 60px; height: 60px; border-radius: 50%;
-            font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 100;
+            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 100;
             display: flex; justify-content: center; align-items: center;
             transition: transform 0.3s ease;
         }
         .whatsapp-float:hover { transform: scale(1.1); }
         
-        .fade-in-element { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-        .fade-in-element.visible { opacity: 1; transform: translateY(0); }
+        .animated { opacity: 0; transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .slide-in-from-left { transform: translateX(-30px); }
+        .slide-in-from-right { transform: translateX(30px); }
+        .slide-in-from-bottom { transform: translateY(30px); }
+        .animated.visible { opacity: 1; transform: translateX(0) translateY(0); }
 
         @media (max-width: 992px) {
             .header-contato, .nav-links { display: none; }
@@ -168,13 +189,12 @@
             .header .container { justify-content: space-between; }
         }
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; } 
+            h2 { font-size: 2.2rem; } 
             #inicio { text-align: center; }
             .hero-container { grid-template-columns: 1fr; }
             .hero-logo { order: -1; margin-bottom: 30px; }
-            #inicio h1 { font-size: 2.8rem; }
-            h2 { font-size: 2rem; } 
-            .product-grid { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.8rem; }
+            .product-grid, .grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -223,14 +243,14 @@
     <main>
         <section id="inicio">
             <div class="container hero-container">
-                <div class="hero-text">
+                <div class="hero-text animated slide-in-from-left">
                     <h1>Seu conforto e segurança com água quente o ano todo.</h1>
                     <p>Somos especialistas em instalação, manutenção e venda de aquecedores a gás. Atendimento rápido e certificado em Porto Alegre e região.</p>
                     <a href="https://wa.me/5551985519090" target="_blank" class="cta-button">
-                        <i class="fab fa-whatsapp"></i> Peça um Orçamento Grátis
+                        <i class="fab fa-whatsapp"></i> Peça um Orçamento
                     </a>
                 </div>
-                <div class="hero-logo">
+                <div class="hero-logo animated slide-in-from-right">
                     <img src="maicon.aquecedores.png" alt="Logo Global Aquecedores em destaque">
                 </div>
             </div>
@@ -238,9 +258,9 @@
         
         <section id="produtos">
             <div class="container">
-                <h2>Nossas Ofertas de Aquecedores</h2>
+                <h2 class="animated slide-in-from-bottom">Nossas Ofertas de Aquecedores</h2>
                 <div class="product-grid">
-                    <div class="product-card fade-in-element">
+                    <div class="product-card animated slide-in-from-bottom">
                         <img src="IMG-20250721-WA0014.jpg" alt="Aquecedor Komeco 16 WH Home">
                         <div class="product-card-content">
                              <h3>KOMECO 16 WH HOME</h3>
@@ -251,7 +271,7 @@
                             <p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
                         </div>
                     </div>
-                    <div class="product-card fade-in-element">
+                    <div class="product-card animated slide-in-from-bottom">
                         <img src="IMG-20250721-WA0015.jpg" alt="Aquecedor Komeco 21D Home">
                         <div class="product-card-content">
                              <h3>KOMECO 21 D HOME</h3>
@@ -262,7 +282,7 @@
                             <p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
                         </div>
                     </div>
-                    <div class="product-card fade-in-element">
+                    <div class="product-card animated slide-in-from-bottom">
                         <img src="IMG-20250721-WA0017.jpg" alt="Aquecedor Komeco 26 WH Home">
                         <div class="product-card-content">
                              <h3>KOMECO 26 WH HOME</h3>
@@ -273,7 +293,7 @@
                              <p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
                         </div>
                     </div>
-                    <div class="product-card fade-in-element">
+                    <div class="product-card animated slide-in-from-bottom">
                         <img src="IMG-20250721-WA0018.jpg" alt="Aquecedor Komeco 15M Slim">
                         <div class="product-card-content">
                              <h3>KOMECO 15M SLIM</h3>
@@ -290,23 +310,23 @@
         
         <section id="servicos">
             <div class="container">
-                <h2>Serviços Especializados</h2>
+                <h2 class="animated slide-in-from-bottom">Serviços Especializados</h2>
                 <div class="grid">
-                    <div class="card fade-in-element">
+                    <div class="card animated slide-in-from-bottom">
                         <img src="servico-instalacao.jpg" alt="Instalação de Aquecedor a gás" class="card-image">
                         <div class="card-content">
                             <h3>Instalação Profissional</h3>
                             <p>Instalação de aquecedores a gás de todas as marcas, seguindo as mais rigorosas normas de segurança.</p>
                         </div>
                     </div>
-                    <div class="card fade-in-element">
+                    <div class="card animated slide-in-from-bottom">
                         <img src="servico-manutencao.jpg" alt="Manutenção de conexões de gás" class="card-image">
                         <div class="card-content">
                              <h3>Manutenção Preventiva</h3>
                             <p>Evite problemas e garanta a eficiência do seu equipamento com nossa revisão completa.</p>
                         </div>
                     </div>
-                    <div class="card fade-in-element">
+                    <div class="card animated slide-in-from-bottom">
                         <img src="servico-conserto.jpg" alt="Conserto de Aquecedor moderno" class="card-image">
                         <div class="card-content">
                             <h3>Conserto de Aquecedores</h3>
@@ -319,8 +339,8 @@
 
         <section id="marcas">
             <div class="container">
-                <h2>Trabalhamos com as Melhores Marcas</h2>
-                <div class="marcas-grid fade-in-element">
+                <h2 class="animated slide-in-from-bottom">Trabalhamos com as Melhores Marcas</h2>
+                <div class="marcas-grid animated slide-in-from-bottom">
                     <img src="https://placehold.co/150x60/333333/FFFFFF?text=Rheem" alt="Logo Rheem" class="marca-logo">
                     <img src="https://placehold.co/150x60/333333/FFFFFF?text=Rinnai" alt="Logo Rinnai" class="marca-logo">
                     <img src="https://placehold.co/150x60/333333/FFFFFF?text=Lorenzetti" alt="Logo Lorenzetti" class="marca-logo">
@@ -332,17 +352,17 @@
 
         <section id="depoimentos">
             <div class="container">
-                <h2>O Que Nossos Clientes Dizem</h2>
+                <h2 class="animated slide-in-from-bottom">O Que Nossos Clientes Dizem</h2>
                 <div class="grid">
-                    <div class="card fade-in-element">
+                    <div class="card animated slide-in-from-bottom">
                         <p>"Serviço excelente e rápido! Meu aquecedor voltou a funcionar perfeitamente. Recomendo a Global Aquecedores!"</p>
                         <div class="autor">- Ana Paula, Porto Alegre</div>
                     </div>
-                    <div class="card fade-in-element">
+                    <div class="card animated slide-in-from-bottom">
                         <p>"Técnicos muito atenciosos e profissionais. Resolveram meu problema de forma eficiente e com preço justo."</p>
                         <div class="autor">- Carlos Eduardo, Canoas</div>
                     </div>
-                     <div class="card fade-in-element">
+                     <div class="card animated slide-in-from-bottom">
                         <p>"Atendimento nota 10, desde o primeiro contato até a finalização do serviço. Confiança total na equipe."</p>
                         <div class="autor">- Mariana S., São Leopoldo</div>
                     </div>
@@ -352,9 +372,9 @@
 
         <section id="certificacoes">
             <div class="container">
-                <h2>Qualidade e Segurança Certificada</h2>
-                <p style="text-align: center; margin-bottom: 40px;">Somos autorizados pelas principais entidades e fabricantes, garantindo serviços com a máxima segurança.</p>
-                <div class="marcas-grid fade-in-element">
+                <h2 class="animated slide-in-from-bottom">Qualidade e Segurança Certificada</h2>
+                <p style="text-align: center; margin-bottom: 40px;" class="animated slide-in-from-bottom">Somos autorizados pelas principais entidades e fabricantes, garantindo serviços com a máxima segurança.</p>
+                <div class="marcas-grid animated slide-in-from-bottom">
                     <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=ABNT" alt="Selo ABNT" class="cert-logo">
                     <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=INMETRO" alt="Selo INMETRO" class="cert-logo">
                     <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=Autorizado" alt="Selo de Autorizado" class="cert-logo">
@@ -364,16 +384,16 @@
         
         <section id="faq">
             <div class="container" style="max-width: 800px;">
-                <h2>Perguntas Frequentes</h2>
-                <div class="faq-item fade-in-element">
+                <h2 class="animated slide-in-from-bottom">Perguntas Frequentes</h2>
+                <div class="faq-item animated slide-in-from-bottom">
                     <div class="faq-pergunta">O que é um aquecedor a gás? <i class="fas fa-chevron-down"></i></div>
                     <div class="faq-resposta"><p>É um equipamento que utiliza gás (GN ou GLP) para aquecer a água que será utilizada em chuveiros, torneiras e outros pontos da residência.</p></div>
                 </div>
-                <div class="faq-item fade-in-element">
+                <div class="faq-item animated slide-in-from-bottom">
                     <div class="faq-pergunta">Qual a importância da manutenção preventiva? <i class="fas fa-chevron-down"></i></div>
                     <div class="faq-resposta"><p>A manutenção preventiva garante a segurança, prolonga a vida útil do aparelho, otimiza o consumo de gás e evita falhas inesperadas. É recomendada anualmente.</p></div>
                 </div>
-                <div class="faq-item fade-in-element">
+                <div class="faq-item animated slide-in-from-bottom">
                     <div class="faq-pergunta">Vocês atendem em toda a Região Metropolitana? <i class="fas fa-chevron-down"></i></div>
                     <div class="faq-resposta"><p>Sim, a Global Aquecedores atende Porto Alegre e toda a região metropolitana. Entre em contato para verificar a disponibilidade em sua localidade.</p></div>
                 </div>
@@ -382,9 +402,9 @@
         
         <section id="contato">
             <div class="container">
-                <h2>Entre em Contato</h2>
+                <h2 class="animated slide-in-from-bottom">Entre em Contato</h2>
                 <div class="contact-grid">
-                    <div class="contact-info">
+                    <div class="contact-info animated slide-in-from-left">
                         <h3>Informações de Contato</h3>
                         <p><i class="fas fa-phone-alt"></i> (51) 98551-9090 (Michael Machado)</p>
                         <p><a href="https://wa.me/5551985519090" target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
@@ -393,7 +413,7 @@
                         <p><i class="fas fa-clock"></i> Horário: Seg-Sex: 8h-20h | Sáb: 8h-12h</p>
                         <p><i class="fas fa-id-card"></i> CNPJ: 54.806.216/0001-78</p>
                     </div>
-                    <div class="contact-form">
+                    <div class="contact-form animated slide-in-from-right">
                         <h3>Ou envie uma mensagem</h3>
                         <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
                             <input type="text" name="name" placeholder="Seu Nome" required>
@@ -404,8 +424,8 @@
                         </form>
                     </div>
                 </div>
-                <div class="map-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.401495811721!2d-51.1349186!3d-29.9967204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977e231313367%3A0x6b3b526017b2f65a!2sR.%20Lindomar%20dos%20Reis%2C%20191%20-%20Jardim%20Itu%2C%20Porto%20Alegre%20-%20RS%2C%2091225-320!5e0!3m2!1spt-BR!2sbr!4v1721617260027!5m2!1spt-BR!2sbr2" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-placeholder animated slide-in-from-bottom">
+                    <iframe src="http://googleusercontent.com/maps.google.com/7" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -432,6 +452,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
             const menuToggleBtn = document.getElementById('menu-toggle-btn');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
@@ -452,6 +473,7 @@
             if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileMenu);
             mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
+            // FAQ Accordion Logic
             document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
                 pergunta.addEventListener('click', () => {
                     const resposta = pergunta.nextElementSibling;
@@ -464,8 +486,10 @@
                 });
             });
 
+            // Update current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
+            // Fade-in animation on scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -474,7 +498,7 @@
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.fade-in-element').forEach(el => {
+            document.querySelectorAll('.animated').forEach(el => {
                 observer.observe(el);
             });
         });
