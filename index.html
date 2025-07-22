@@ -6,20 +6,17 @@
     <title>Global Aquecedores | Aquecedores a Gás em Porto Alegre - Instalação e Manutenção</title>
     <meta name="description" content="Global Aquecedores: Especialistas em instalação, manutenção, conserto e venda de aquecedores a gás em Porto Alegre e região. Segurança e qualidade garantida.">
     
+    <link rel="icon" href="maicon.aquecedores.jpg" type="image/jpeg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     
-    <!-- Swiper CSS (para o carrossel de produtos) -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- Google AdSense (script principal) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SEU_ID_CLIENTE_ADSENSE" crossorigin="anonymous"></script>
 
     <style>
-        /* --- ESTILOS COMPLETOS AQUI --- */
         :root {
             --cor-azul-escuro: #0D2B4E;
             --cor-azul-claro: #1A73E8;
@@ -32,7 +29,6 @@
             --fonte-principal: 'Roboto', sans-serif;
         }
 
-        /* --- Reset e Globais --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body {
@@ -46,18 +42,13 @@
         h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
         h3 { font-size: 1.5rem; }
 
-        /* --- Header / Menu no Topo --- */
         .header {
-            background-color: var(--cor-branco);
+            background-color: var(--cor-fundo);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap; 
         }
         .header .container {
             display: flex;
@@ -65,9 +56,9 @@
             align-items: center;
         }
         .logo {
-            height: 50px; /* Altura fixa para o logo */
+            height: 50px;
             width: auto;
-            object-fit: contain; /* Garante que a imagem se ajuste */
+            object-fit: contain;
         }
         .nav-links a {
             color: var(--cor-azul-escuro);
@@ -94,451 +85,168 @@
             margin-right: 8px;
         }
 
-        /* Mobile Menu Toggle Button */
         .menu-toggle {
-            display: none; /* Hidden on desktop */
+            display: none;
             font-size: 1.8rem;
             background: none;
             border: none;
             color: var(--cor-azul-escuro);
             cursor: pointer;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-nav-overlay {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
             z-index: 1001;
         }
-
         .mobile-nav {
             position: fixed;
-            top: 0;
-            right: 0;
-            width: 250px; /* Width of the mobile menu */
+            top: 0; right: 0;
+            width: 250px;
             height: 100%;
-            background-color: var(--cor-branco);
+            background-color: var(--cor-fundo);
             box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-            transform: translateX(100%); /* Start off-screen */
+            transform: translateX(100%);
             transition: transform 0.3s ease-out;
             z-index: 1002;
             padding: 20px;
         }
-
-        .mobile-nav.active {
-            transform: translateX(0); /* Slide in */
-        }
-
+        .mobile-nav.active { transform: translateX(0); }
         .mobile-nav .close-btn {
-            font-size: 1.8rem;
-            background: none;
-            border: none;
-            color: var(--cor-azul-escuro);
-            cursor: pointer;
-            display: block;
-            margin-left: auto;
-            margin-bottom: 20px;
+            font-size: 1.8rem; background: none; border: none;
+            color: var(--cor-azul-escuro); cursor: pointer;
+            display: block; margin-left: auto; margin-bottom: 20px;
         }
-
-        .mobile-nav ul {
-            list-style: none;
-        }
-
+        .mobile-nav ul { list-style: none; }
         .mobile-nav ul li a {
-            display: block;
-            padding: 10px 0;
-            color: var(--cor-texto);
-            font-weight: 500;
-            text-decoration: none;
-            border-bottom: 1px solid #eee;
+            display: block; padding: 10px 0;
+            color: var(--cor-texto); font-weight: 500;
+            text-decoration: none; border-bottom: 1px solid #eee;
         }
-
-        .mobile-nav ul li:last-child a {
-            border-bottom: none;
-        }
-
-        /* --- Seção Hero (Principal) --- */
+        .mobile-nav ul li:last-child a { border-bottom: none; }
+        
         #inicio {
             background: linear-gradient(rgba(13, 43, 78, 0.7), rgba(13, 43, 78, 0.7)), url('IMG-20250721-WA0016.jpg') no-repeat center center/cover;
             color: var(--cor-texto-claro);
-            padding: 100px 20px;
-            text-align: center;
-            min-height: 100vh; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 100px 20px; text-align: center;
+            min-height: 90vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
         }
         #inicio h1 {
-            color: var(--cor-texto-claro);
-            font-size: 3.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
+            color: var(--cor-texto-claro); font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 20px;
         }
-        #inicio p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-        }
+        #inicio p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; }
         .cta-button {
-            background-color: var(--cor-amarelo);
-            color: var(--cor-azul-escuro);
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-flex; 
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: var(--cor-amarelo); color: var(--cor-azul-escuro);
+            padding: 15px 30px; border-radius: 50px;
+            font-size: 1.2rem; font-weight: bold; text-decoration: none;
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .cta-button:hover {
-            background-color: #e68900; /* Laranja mais escuro */
-            transform: translateY(-3px);
+            background-color: #e68900; transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
-        /* --- Padrão de Seção --- */
         section { padding: 80px 0; }
         #servicos, #produtos, #sobre, #depoimentos, #faq { background-color: var(--cor-fundo-secao); }
 
-        /* --- Estilo dos Cards (Serviços, Produtos) --- */
         .card {
-            background: var(--cor-fundo);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        .card i {
-            font-size: 3rem;
-            color: var(--cor-azul-claro);
-            margin-bottom: 20px;
-        }
-
-        /* --- Seção de Marcas Atendidas --- */
-        .marcas-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-        }
-        .marca-logo { 
-            height: 50px; 
-            filter: grayscale(1); 
-            opacity: 0.7; 
-            transition: all 0.3s ease;
-            max-width: 150px; /* Limita o tamanho do logo */
-            object-fit: contain;
-        }
-        .marca-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        /* --- Seção de Depoimentos --- */
-        #depoimentos .depoimento-card {
-            background: var(--cor-branco);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        #depoimentos .depoimento-card p {
-            font-style: italic;
-            margin-bottom: 15px;
-            color: var(--cor-texto);
-        }
-        #depoimentos .depoimento-card .autor {
-            font-weight: bold;
-            color: var(--cor-azul-escuro);
-        }
-        #depoimentos .swiper-button-next, #depoimentos .swiper-button-prev {
-            color: var(--cor-azul-escuro);
-        }
-        #depoimentos .swiper-pagination-bullet-active {
-            background: var(--cor-azul-escuro);
-        }
-
-
-        /* --- Seção de Certificações --- */
-        #certificacoes {
-            background-color: var(--cor-fundo);
-            padding: 60px 20px;
-        }
-        #certificacoes .cert-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        #certificacoes .cert-logo {
-            height: 80px; /* Tamanho maior para selos */
-            width: auto;
-            object-fit: contain;
-            filter: grayscale(0%); /* Selos coloridos */
-            opacity: 0.9;
-            transition: all 0.3s ease;
-        }
-        #certificacoes .cert-logo:hover {
-            transform: scale(1.05);
-            opacity: 1;
-        }
-
-        /* --- Seção FAQ --- */
-        #faq .faq-item {
-            background: var(--cor-branco);
-            border: 1px solid var(--cor-borda-card);
-            border-radius: 8px;
-            margin-bottom: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        #faq .faq-pergunta {
-            padding: 18px 25px;
-            background-color: var(--cor-fundo-secao);
-            color: var(--cor-azul-escuro);
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-        #faq .faq-pergunta:hover {
-            background-color: #e9eff3;
-        }
-        #faq .faq-pergunta i {
-            transition: transform 0.3s ease;
-        }
-        #faq .faq-pergunta.active i {
-            transform: rotate(180deg);
-        }
-        #faq .faq-resposta {
-            padding: 15px 25px;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            display: none; /* Hidden by default */
-            border-top: 1px solid var(--cor-borda-card);
-        }
-
-        /* --- Seção de Contato --- */
-        #contato .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        .contact-info p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: flex-start; 
-        }
-
-        .contact-info i {
-            color: var(--cor-azul-claro); /* Cor do ícone */
-            margin-right: 15px;
-            width: 25px; 
-            text-align: center;
-            font-size: 1.3rem; 
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: var(--fonte-principal);
-            font-size: 1rem;
-            color: var(--cor-texto);
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--cor-amarelo);
-            box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--cor-azul-claro);
-            color: var(--cor-branco);
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--cor-azul-escuro);
-        }
-
-        .map-placeholder {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            height: 300px; 
-            margin-top: 40px;
-            width: 100%;
-        }
-        .map-placeholder iframe { 
-            width: 100%;
+            background: var(--cor-fundo); border-radius: 12px;
+            padding: 30px; text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;
             height: 100%;
-            border: 0;
         }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .card i { font-size: 3rem; color: var(--cor-azul-claro); margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
+        .marcas-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; }
+        .marca-logo { height: 50px; filter: grayscale(1); opacity: 0.7; transition: all 0.3s ease; max-width: 150px; object-fit: contain; }
+        .marca-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
 
-        /* --- Rodapé (Footer) --- */
-        .footer {
-            background-color: var(--cor-azul-escuro);
-            color: var(--cor-texto-claro);
-            text-align: center;
-            padding: 40px 20px;
-        }
+        #depoimentos .card p { font-style: italic; margin-bottom: 15px; }
+        #depoimentos .card .autor { font-weight: bold; color: var(--cor-azul-escuro); }
+        
+        #certificacoes { background-color: var(--cor-fundo); }
+        #certificacoes .cert-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; margin-top: 40px; }
+        #certificacoes .cert-logo { height: 80px; width: auto; object-fit: contain; opacity: 0.9; transition: all 0.3s ease; }
+        #certificacoes .cert-logo:hover { transform: scale(1.05); opacity: 1; }
 
-        .footer .footer-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto 20px auto;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-        }
+        #faq .faq-item { background: var(--cor-fundo); border: 1px solid var(--cor-borda-card); border-radius: 8px; margin-bottom: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        #faq .faq-pergunta { padding: 18px 25px; background-color: var(--cor-fundo-secao); color: var(--cor-azul-escuro); font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background-color 0.3s ease; }
+        #faq .faq-pergunta:hover { background-color: #e9eff3; }
+        #faq .faq-pergunta i { transition: transform 0.3s ease; }
+        #faq .faq-pergunta.active i { transform: rotate(180deg); }
+        #faq .faq-resposta { padding: 25px; background-color: var(--cor-fundo); display: none; border-top: 1px solid var(--cor-borda-card); text-align: left; }
+        #faq .faq-resposta p { margin: 0; }
 
-        .footer .social-links {
-            margin-top: 15px;
-            display: flex;
-            gap: 20px;
-        }
+        #contato .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: flex-start; }
+        .contact-info p { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: flex-start; text-align: left; }
+        .contact-info i { color: var(--cor-azul-claro); margin-right: 15px; width: 25px; text-align: center; font-size: 1.3rem; margin-top: 4px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-family: var(--fonte-principal); font-size: 1rem; color: var(--cor-texto); }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--cor-amarelo); box-shadow: 0 0 5px rgba(255, 193, 7, 0.5); }
+        .btn-submit { width: 100%; padding: 15px; background-color: var(--cor-azul-claro); color: var(--cor-fundo); border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; }
+        .btn-submit:hover { background-color: var(--cor-azul-escuro); }
+        .map-placeholder { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); height: 300px; margin-top: 40px; width: 100%; }
+        .map-placeholder iframe { width: 100%; height: 100%; border: 0; }
 
-        .social-links a {
-            color: var(--cor-texto-claro);
-            font-size: 1.8rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+        .footer { background-color: var(--cor-azul-escuro); color: var(--cor-texto-claro); text-align: center; padding: 40px 20px; }
+        .footer-content { display: flex; flex-direction: column; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto 20px auto; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); }
+        .footer .social-links { margin-top: 15px; display: flex; gap: 20px; }
+        .social-links a { color: var(--cor-texto-claro); font-size: 1.8rem; transition: color 0.3s ease, transform 0.3s ease; }
+        .social-links a:hover { color: var(--cor-amarelo); transform: translateY(-3px); }
+        .footer-text { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; }
+        .footer-text a { color: var(--cor-texto-claro); text-decoration: underline; }
+        .footer-text a:hover { color: var(--cor-amarelo); }
 
-        .social-links a:hover {
-            color: var(--cor-amarelo);
-            transform: translateY(-3px);
-        }
-
-        .footer-text {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .footer-text a {
-            color: var(--cor-texto-claro);
-            text-decoration: underline;
-        }
-        .footer-text a:hover {
-            color: var(--cor-amarelo);
-        }
-
-        /* --- Botão Flutuante do WhatsApp --- */
         .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366; /* Verde WhatsApp */
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%; /* Círculo */
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: #25D366; color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            text-align: center; font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 100;
+            display: flex; justify-content: center; align-items: center;
             transition: transform 0.3s ease;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* --- AdSense Placeholder Styles --- */
         .ad-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 120px; /* Altura mínima para o bloco de anúncio */
-            background-color: #f0f0f0; /* Um fundo neutro para o placeholder */
-            border: 1px dashed #ccc; /* Borda tracejada para indicar o placeholder */
-            margin: 40px auto; /* Espaçamento */
-            max-width: 90%; /* Largura máxima */
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
+            padding: 20px 0;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 120px;
         }
 
-
-        /* --- Responsividade --- */
         @media (max-width: 992px) {
             .header-contato { display: none; }
-            .nav-links { display: none; } /* Esconde desktop nav */
-            .menu-toggle { display: block; } /* Mostra botão de toggle */
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
             .header .container { justify-content: space-between; }
         }
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            #inicio h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .map-placeholder { height: 250px; } /* Ajuste de altura para mobile */
+            h1 { font-size: 2.5rem; } #inicio h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; } .contact-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            #inicio h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.8rem; }
-            #inicio p { font-size: 1rem; }
+            h1 { font-size: 2rem; } #inicio h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; } #inicio p { font-size: 1rem; }
             .cta-button { font-size: 1rem; padding: 12px 25px; }
             .logo { height: 40px; }
-            section { padding: 40px 15px; }
-            .grid { gap: 20px; }
-            .servico-card, .card { padding: 20px; }
+            section { padding: 60px 0; }
+            .card { padding: 20px; }
             .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
         }
     </style>
-
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <a href="#inicio" class="logo-link">
-                <!-- NOVA LOGO INTEGRADA -->
-                <img src="maicom aquecedores.jpg" alt="Logo Global Aquecedores" class="logo">
+            <a href="#inicio">
+                <img src="maicon.aquecedores.jpg" alt="Logo Global Aquecedores" class="logo">
             </a>
             <nav class="nav-links">
                 <a href="#servicos">Serviços</a>
@@ -559,7 +267,6 @@
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
     <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
     <nav class="mobile-nav" id="mobile-nav">
         <button class="close-btn" id="close-mobile-nav-btn"><i class="fas fa-times"></i></button>
@@ -584,7 +291,6 @@
             </a>
         </section>
 
-        <!-- AdSense Placeholder 1 -->
         <div class="container">
             <section class="ad-section">
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-SEU_ID_CLIENTE_ADSENSE" data-ad-slot="SEU_SLOT_ID_1" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -595,18 +301,18 @@
         <section id="servicos">
             <div class="container">
                 <h2>Nossos Serviços</h2>
-                <div class="servicos-grid">
-                    <div class="servico-card">
+                <div class="grid">
+                    <div class="card">
                         <i class="fas fa-tools"></i>
                         <h3>Instalação Profissional</h3>
                         <p>Instalação de aquecedores a gás de todas as marcas, seguindo as mais rigorosas normas de segurança.</p>
                     </div>
-                    <div class="servico-card">
+                    <div class="card">
                         <i class="fas fa-shield-alt"></i>
                         <h3>Manutenção Preventiva</h3>
                         <p>Evite problemas futuros e garanta a eficiência e segurança do seu equipamento com nossa revisão completa.</p>
                     </div>
-                    <div class="servico-card">
+                    <div class="card">
                         <i class="fas fa-wrench"></i>
                         <h3>Conserto de Aquecedores</h3>
                         <p>Nossa equipe técnica é especializada para diagnosticar e resolver qualquer problema de forma rápida.</p>
@@ -711,7 +417,6 @@
         <section id="contato">
             <div class="container">
                 <h2>Entre em Contato</h2>
-                <p style="text-align: center; margin-bottom: 30px;">Precisa de um orçamento ou tem alguma dúvida? Fale conosco agora mesmo pelo WhatsApp ou ligue. Estamos prontos para atender você!</p>
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Informações de Contato</h3>
@@ -719,25 +424,22 @@
                         <p><a href="https://wa.me/5551985519090" target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
                         <p><i class="fas fa-envelope"></i> contato@globalaquecedores.com.br</p>
                         <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Lindomar dos Reis, 191, Jardim Itu, Porto Alegre - RS, CEP 91225-320</p>
-                        <p><i class="fas fa-clock"></i> Horário de Atendimento: Seg-Sex: 8h-20h | Sáb: 8h-12h</p>
+                        <p><i class="fas fa-clock"></i> Horário: Seg-Sex: 8h-20h | Sáb: 8h-12h</p>
                         <p><i class="fas fa-id-card"></i> CNPJ: 54.806.216/0001-78</p>
                     </div>
                     <div class="contact-form">
                         <h3>Ou envie uma mensagem</h3>
                         <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
                             <input type="text" name="name" placeholder="Seu Nome" required>
-                            <input type="email" name="email" placeholder="Seu E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                            <input type="tel" name="phone" placeholder="(XX) XXXXX-XXXX" required pattern="\(\d{2}\)\s\d{5}-\d{4}">
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
+                            <input type="tel" name="phone" placeholder="(XX) XXXXX-XXXX" required>
                             <textarea name="message" rows="5" placeholder="Sua Mensagem..." required></textarea>
                             <button type="submit" class="btn-submit">Enviar Mensagem</button>
                         </form>
                     </div>
                 </div>
                 <div class="map-placeholder">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.401495811721!2d-51.1349186!3d-29.9967204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977e231313367%3A0xf6d601b3c9d7d4f!2sR.%20Lindomar%20dos%20Reis%2C%20191%20-%20Jardim%20Itu%2C%20Porto%20Alegre%20-%20RS%2C%2091225-320!5e0!3m2!1spt-BR!2sbr!4v1721617260027!5m2!1spt-BR!2sbr" 
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.517373972236!2d-51.1390318848858!3d-29.99342798189914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977e56847c237%3A0x5385058c09d73c1d!2sRua%20Lindomar%20dos%20Reis%2C%20191%20-%20Jardim%20Itu%2C%20Porto%20Alegre%20-%20RS%2C%2091225-320!5e0!3m2!1spt-BR!2sbr!4v1658424912345!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -746,14 +448,14 @@
     <div class="container">
         <section class="ad-section">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-SEU_ID_CLIENTE_ADSENSE" data-ad-slot="SEU_SLOT_ID_3" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script> (adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </section>
     </div>
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="#inicio" class="footer-brand-link">
-                <img src="maicom aquecedores.jpg" alt="Logo Global Aquecedores" class="logo" style="filter: brightness(0) invert(1);"> 
+            <a href="#inicio">
+                <img src="maicon.aquecedores.jpg" alt="Logo Global Aquecedores" class="logo" style="filter: brightness(0) invert(1);">
             </a>
             <div class="social-links">
                 <a href="https://facebook.com/GlobaAquecedores" target="_blank" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -770,132 +472,63 @@
     </a>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-                // Close mobile menu if open
-                const mobileNav = document.getElementById('mobile-nav');
-                const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-                if (mobileNav && mobileNav.classList.contains('active')) {
-                    mobileNav.classList.remove('active');
-                    if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
-                }
-            });
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const menuToggleBtn = document.getElementById('menu-toggle-btn');
+            const closeMobileNavBtn = document.getElementById('close-mobile-nav-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        // Mobile menu toggle
-        const menuToggleBtn = document.getElementById('menu-toggle-btn');
-        const closeMobileNavBtn = document.getElementById('close-mobile-nav-btn');
-        const mobileNav = document.getElementById('mobile-nav');
-        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-        if (menuToggleBtn) {
-            menuToggleBtn.addEventListener('click', () => {
+            function openMobileMenu() {
                 if (mobileNav) mobileNav.classList.add('active');
                 if (mobileNavOverlay) mobileNavOverlay.style.display = 'block';
-            });
-        }
+            }
 
-        if (closeMobileNavBtn) {
-            closeMobileNavBtn.addEventListener('click', () => {
+            function closeMobileMenu() {
                 if (mobileNav) mobileNav.classList.remove('active');
                 if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
+            }
+
+            if (menuToggleBtn) menuToggleBtn.addEventListener('click', openMobileMenu);
+            if (closeMobileNavBtn) closeMobileNavBtn.addEventListener('click', closeMobileMenu);
+            if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileMenu);
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
             });
-        }
 
-        if (mobileNavOverlay) {
-            mobileNavOverlay.addEventListener('click', () => {
-                if (mobileNav) mobileNav.classList.remove('active');
-                if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
-            });
-        }
-
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileNav) mobileNav.classList.remove('active');
-                if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
-            });
-        });
-
-        // Update current year in footer
-        const currentYearSpan = document.getElementById('current-year');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Basic form submission (for demonstration, you'd need a backend for real submission)
-        const contactForm = document.querySelector('#contato form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Basic validation
-                const name = this.querySelector('input[name="name"]').value;
-                const email = this.querySelector('input[name="email"]').value;
-                const phone = this.querySelector('input[name="phone"]').value;
-                const message = this.querySelector('textarea[name="message"]').value;
-
-                if (!name || !email || !phone || !message) {
-                    alert('Por favor, preencha todos os campos obrigatórios.');
-                    return;
-                }
-                if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
-                    alert('Por favor, insira um endereço de e-mail válido.');
-                    return;
-                }
-                // Basic phone pattern check, adjust as needed for specific formats
-                if (!/^\(\d{2}\)\s\d{5}-\d{4}$/.test(phone)) { // Updated regex for (XX) XXXXX-XXXX
-                    alert('Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.');
-                    return;
-                }
-
-
-                alert('Formulário enviado! (Esta é uma demonstração. Em um site real, os dados seriam enviados para um servidor, como o Formspree.io)');
-                this.reset(); // Clear the form
-            });
-        }
-
-        // FAQ Accordion Logic
-        document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
-            pergunta.addEventListener('click', () => {
-                const resposta = pergunta.nextElementSibling;
-                const icon = pergunta.querySelector('i');
-
-                // Close all other open answers
-                document.querySelectorAll('.faq-resposta').forEach(otherResposta => {
-                    if (otherResposta !== resposta && otherResposta.style.display === 'block') {
-                        otherResposta.style.display = 'none';
-                        otherResposta.previousElementSibling.classList.remove('active');
-                        otherResposta.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+            // Smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
                 });
-
-                // Toggle current answer
-                if (resposta.style.display === 'block') {
-                    resposta.style.display = 'none';
-                    pergunta.classList.remove('active');
-                    icon.style.transform = 'rotate(0deg)';
-                } else {
-                    resposta.style.display = 'block';
-                    pergunta.classList.add('active');
-                    icon.style.transform = 'rotate(180deg)';
-                }
             });
-        });
 
-        // AdSense push for initial load (if not already pushed by the async script)
-        // This is often handled automatically by the async script, but can be useful for dynamic content.
-        // if (window.adsbygoogle) {
-        //     (adsbygoogle = window.adsbygoogle || []).push({});
-        // }
+            // FAQ Accordion Logic
+            document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
+                pergunta.addEventListener('click', () => {
+                    const resposta = pergunta.nextElementSibling;
+                    pergunta.classList.toggle('active');
+                    if (pergunta.classList.contains('active')) {
+                        resposta.style.display = 'block';
+                    } else {
+                        resposta.style.display = 'none';
+                    }
+                });
+            });
+
+            // Update current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
     </script>
 </body>
 </html>
