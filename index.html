@@ -16,12 +16,12 @@
 
     <style>
         :root {
-            --cor-azul-escuro: #0a2540; /* Um azul mais profundo e moderno */
-            --cor-azul-claro: #007bff; /* Um azul mais vibrante */
+            --cor-azul-escuro: #0a2540;
+            --cor-azul-claro: #007bff;
             --cor-amarelo: #ffc107;
             --cor-dourado: #ffb300;
             --cor-fundo: #FFFFFF;
-            --cor-fundo-secao: #f8f9fa; /* Um cinza um pouco mais claro */
+            --cor-fundo-secao: #f0f4f9; /* Tom de cinza azulado claro */
             --cor-texto: #343a40;
             --cor-texto-claro: #FFFFFF;
             --cor-borda-card: #dee2e6;
@@ -36,7 +36,7 @@
             font-family: var(--fonte-principal);
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
-            line-height: 1.7; /* Aumenta o espaçamento entre linhas para melhor leitura */
+            line-height: 1.7;
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         h1, h2, h3 { color: var(--cor-azul-escuro); font-weight: 700; }
@@ -58,12 +58,8 @@
             position: relative; transition: color 0.3s ease;
         }
         .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
+            content: ''; position: absolute;
+            width: 0; height: 2px; bottom: 0; left: 50%;
             background-color: var(--cor-azul-claro);
             transition: all 0.3s ease;
         }
@@ -82,8 +78,9 @@
         .mobile-nav ul li a { display: block; padding: 15px 0; color: var(--cor-texto); font-weight: 500; text-decoration: none; border-bottom: 1px solid #eee; }
         
         #inicio {
-            padding: 80px 0; min-height: 90vh;
-            display: flex; align-items: center; background-color: var(--cor-fundo-secao);
+            padding: 80px 0;
+            display: flex; align-items: center; 
+            background: linear-gradient(135deg, #f0f4f9 0%, #e6e9f0 100%);
         }
         .hero-container { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
         .hero-text h1 { font-size: 3.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
@@ -100,10 +97,10 @@
             gap: 12px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
             border: none;
         }
-        .cta-button:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 193, 7, 0.5); }
+        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 20px rgba(255, 193, 7, 0.5); }
 
         section { padding: 100px 0; }
-        #servicos, #produtos, #sobre, #depoimentos, #faq { background-color: var(--cor-fundo-secao); }
+        #servicos, #produtos, #depoimentos, #faq { background-color: var(--cor-fundo-secao); }
 
         .card {
             background: var(--cor-fundo); border-radius: 16px;
@@ -174,8 +171,15 @@
             font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 100;
             display: flex; justify-content: center; align-items: center;
             transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float:hover { transform: scale(1.1); animation-play-state: paused; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
         
         .animated { opacity: 0; transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .slide-in-from-left { transform: translateX(-30px); }
@@ -246,7 +250,7 @@
                 <div class="hero-text animated slide-in-from-left">
                     <h1>Seu conforto e segurança com água quente o ano todo.</h1>
                     <p>Somos especialistas em instalação, manutenção e venda de aquecedores a gás. Atendimento rápido e certificado em Porto Alegre e região.</p>
-                    <a href="https://wa.me/5551985519090" target="_blank" class="cta-button">
+                    <a href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank" class="cta-button">
                         <i class="fab fa-whatsapp"></i> Peça um Orçamento
                     </a>
                 </div>
@@ -407,7 +411,7 @@
                     <div class="contact-info animated slide-in-from-left">
                         <h3>Informações de Contato</h3>
                         <p><i class="fas fa-phone-alt"></i> (51) 98551-9090 (Michael Machado)</p>
-                        <p><a href="https://wa.me/5551985519090" target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
+                        <p><a href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
                         <p><i class="fas fa-envelope"></i> contato@globalaquecedores.com.br</p>
                         <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Lindomar dos Reis, 191, Jardim Itu, Porto Alegre - RS, CEP 91225-320</p>
                         <p><i class="fas fa-clock"></i> Horário: Seg-Sex: 8h-20h | Sáb: 8h-12h</p>
@@ -425,7 +429,7 @@
                     </div>
                 </div>
                 <div class="map-placeholder animated slide-in-from-bottom">
-                    <iframe src="http://googleusercontent.com/maps.google.com/7" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="http://googleusercontent.com/maps.google.com/8" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -439,20 +443,19 @@
             <div class="social-links">
                 <a href="https://facebook.com/GlobaAquecedores" target="_blank" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://instagram.com/global_aquecedores1" target="_blank" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/5551985519090" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
         <p class="footer-text">© <span id="current-year"></span> Global Aquecedores. Todos os direitos reservados.</p>
         <p class="footer-text">Desenvolvido por <a href="https://seusite.com" target="_blank">Valentim Wiggers</a></p>
     </footer>
 
-    <a href="https://wa.me/5551985519090" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
             const menuToggleBtn = document.getElementById('menu-toggle-btn');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
@@ -473,7 +476,6 @@
             if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileMenu);
             mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-            // FAQ Accordion Logic
             document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
                 pergunta.addEventListener('click', () => {
                     const resposta = pergunta.nextElementSibling;
@@ -486,10 +488,8 @@
                 });
             });
 
-            // Update current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Fade-in animation on scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
