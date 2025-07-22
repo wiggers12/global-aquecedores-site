@@ -91,8 +91,9 @@
 
         .card {
             background: var(--cor-fundo); border-radius: 12px;
-            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            transition: all 0.3s ease; height: 100%; overflow: hidden;
+            padding: 0; text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;
+            height: 100%; overflow: hidden;
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         .card-image { width: 100%; height: 200px; object-fit: cover; background-color: #eee; }
@@ -105,7 +106,7 @@
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         .product-card img { width: 100%; height: auto; }
         .product-card-content { padding: 20px; text-align: left; flex-grow: 1; display: flex; flex-direction: column;}
-        .product-card-content h3 { font-size: 1.8rem; margin-bottom: 15px; }
+        .product-card-content h3 { font-size: 1.8rem; margin-bottom: 15px; text-align: center; }
         .product-card-content .price-container { margin: 20px 0; text-align: center; }
         .product-card-content .price-item { display: inline-block; padding: 0 15px; }
         .product-card-content .price-label { font-size: 0.9rem; color: var(--cor-texto); }
@@ -244,83 +245,55 @@
                         <div class="product-card-content">
                              <h3>KOMECO 16 WH HOME</h3>
                             <div class="price-container">
-                                <div class="price-item">
-                                    <div class="price-label">À vista</div>
-                                    <div class="price-value">R$2.100</div>
-                                </div>
-                                <div class="price-item">
-                                    <div class="price-label">Cartão</div>
-                                    <div class="price-value">R$2.300</div>
-                                </div>
+                                <div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$2.100</div></div>
+                                <div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$2.300</div></div>
                             </div>
-                            <p style="text-align: center; font-weight: 500;">em até 6x</p>
-                            <p class="install-info">Valor com instalação inclusa.<br>Garantia de 3 anos por defeito de fábrica.</p>
+                            <p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
                         </div>
                     </div>
-                    <div class="product-card fade-in-element">
+                     <div class="product-card fade-in-element">
                         <img src="IMG-20250721-WA0015.jpg" alt="Aquecedor Komeco 21D Home">
                         <div class="product-card-content">
                              <h3>KOMECO 21 D HOME</h3>
                             <div class="price-container">
-                                <div class="price-item">
-                                    <div class="price-label">À vista</div>
-                                    <div class="price-value">R$2.400</div>
-                                </div>
-                                <div class="price-item">
-                                    <div class="price-label">Cartão</div>
-                                    <div class="price-value">R$2.600</div>
-                                </div>
+                                <div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$2.400</div></div>
+                                <div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$2.600</div></div>
                             </div>
-                            <p style="text-align: center; font-weight: 500;">em até 6x</p>
-                            <p class="install-info">Valor com instalação inclusa.<br>Garantia de 3 anos por defeito de fábrica.</p>
+                            <p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
                         </div>
                     </div>
-                    <div class="product-card fade-in-element">
+                     <div class="product-card fade-in-element">
                         <img src="IMG-20250721-WA0017.jpg" alt="Aquecedor Komeco 26 WH Home">
                         <div class="product-card-content">
                              <h3>KOMECO 26 WH HOME</h3>
                             <div class="price-container">
-                                <div class="price-item">
-                                    <div class="price-label">À vista</div>
-                                    <div class="price-value">R$3.200</div>
-                                </div>
-                                <div class="price-item">
-                                    <div class="price-label">Cartão</div>
-                                    <div class="price-value">R$3.350</div>
-                                </div>
+                                <div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$3.200</div></div>
+                                <div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$3.350</div></div>
                             </div>
-                             <p style="text-align: center; font-weight: 500;">em até 6x</p>
-                             <p class="install-info">Valor com instalação inclusa.<br>Garantia de 3 anos por defeito de fábrica.</p>
+                             <p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
                         </div>
                     </div>
-                    <div class="product-card fade-in-element">
+                     <div class="product-card fade-in-element">
                         <img src="IMG-20250721-WA0018.jpg" alt="Aquecedor Komeco 15M Slim">
                         <div class="product-card-content">
                              <h3>KOMECO 15M SLIM</h3>
                             <div class="price-container">
-                                <div class="price-item">
-                                    <div class="price-label">À vista</div>
-                                    <div class="price-value">R$1.900</div>
-                                </div>
-                                <div class="price-item">
-                                    <div class="price-label">Cartão</div>
-                                    <div class="price-value">R$2.000</div>
-                                </div>
+                                <div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$1.900</div></div>
+                                <div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$2.000</div></div>
                             </div>
-                            <p style="text-align: center; font-weight: 500;">em até 4x</p>
                             <p class="install-info">Valor com instalação inclusa.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <section id="servicos">
             <div class="container">
                 <h2>Nossos Serviços</h2>
                 <div class="grid">
                     <div class="card fade-in-element">
-                        <img src="https://placehold.co/400x250/0D2B4E/FFFFFF?text=Foto+de+Instalação" alt="Instalação de Aquecedor" class="card-image">
+                        <img src="IMG-20250721-WA0016.jpg" alt="Chuveiro com água quente" class="card-image">
                         <div class="card-content">
                             <h3>Instalação Profissional</h3>
                             <p>Instalação de aquecedores a gás de todas as marcas, seguindo as mais rigorosas normas de segurança.</p>
@@ -343,12 +316,122 @@
                 </div>
             </div>
         </section>
+
+        <section id="marcas">
+            <div class="container">
+                <h2>Trabalhamos com as Melhores Marcas</h2>
+                <div class="marcas-grid fade-in-element">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Rheem" alt="Logo Rheem" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Rinnai" alt="Logo Rinnai" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Lorenzetti" alt="Logo Lorenzetti" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Bosch" alt="Logo Bosch" class="marca-logo">
+                    <img src="https://placehold.co/150x60/333333/FFFFFF?text=Komeco" alt="Logo Komeco" class="marca-logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos">
+            <div class="container">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <div class="grid">
+                    <div class="card fade-in-element">
+                        <p>"Serviço excelente e rápido! Meu aquecedor voltou a funcionar perfeitamente. Recomendo a Global Aquecedores!"</p>
+                        <div class="autor">- Ana Paula, Porto Alegre</div>
+                    </div>
+                    <div class="card fade-in-element">
+                        <p>"Técnicos muito atenciosos e profissionais. Resolveram meu problema de forma eficiente e com preço justo."</p>
+                        <div class="autor">- Carlos Eduardo, Canoas</div>
+                    </div>
+                     <div class="card fade-in-element">
+                        <p>"Atendimento nota 10, desde o primeiro contato até a finalização do serviço. Confiança total na equipe."</p>
+                        <div class="autor">- Mariana S., São Leopoldo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificacoes">
+            <div class="container">
+                <h2>Qualidade e Segurança Certificada</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Somos autorizados pelas principais entidades e fabricantes, garantindo serviços com a máxima segurança.</p>
+                <div class="marcas-grid fade-in-element">
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=ABNT" alt="Selo ABNT" class="cert-logo">
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=INMETRO" alt="Selo INMETRO" class="cert-logo">
+                    <img src="https://placehold.co/120x80/0D47A1/FFFFFF?text=Autorizado" alt="Selo de Autorizado" class="cert-logo">
+                </div>
+            </div>
+        </section>
         
-        </main>
-    
+        <section id="faq">
+            <div class="container" style="max-width: 800px;">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-item fade-in-element">
+                    <div class="faq-pergunta">O que é um aquecedor a gás? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-resposta"><p>É um equipamento que utiliza gás (GN ou GLP) para aquecer a água que será utilizada em chuveiros, torneiras e outros pontos da residência.</p></div>
+                </div>
+                <div class="faq-item fade-in-element">
+                    <div class="faq-pergunta">Qual a importância da manutenção preventiva? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-resposta"><p>A manutenção preventiva garante a segurança, prolonga a vida útil do aparelho, otimiza o consumo de gás e evita falhas inesperadas. É recomendada anualmente.</p></div>
+                </div>
+                <div class="faq-item fade-in-element">
+                    <div class="faq-pergunta">Vocês atendem em toda a Região Metropolitana? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-resposta"><p>Sim, a Global Aquecedores atende Porto Alegre e toda a região metropolitana. Entre em contato para verificar a disponibilidade em sua localidade.</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fas fa-phone-alt"></i> (51) 98551-9090 (Michael Machado)</p>
+                        <p><a href="https://wa.me/5551985519090" target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
+                        <p><i class="fas fa-envelope"></i> contato@globalaquecedores.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Lindomar dos Reis, 191, Jardim Itu, Porto Alegre - RS, CEP 91225-320</p>
+                        <p><i class="fas fa-clock"></i> Horário: Seg-Sex: 8h-20h | Sáb: 8h-12h</p>
+                        <p><i class="fas fa-id-card"></i> CNPJ: 54.806.216/0001-78</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Ou envie uma mensagem</h3>
+                        <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
+                            <input type="tel" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+                            <textarea name="message" rows="5" placeholder="Sua Mensagem..." required></textarea>
+                            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.401495811721!2d-51.1349186!3d-29.9967204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977e231313367%3A0x6b3b526017b2f65a!2sR.%20Lindomar%20dos%20Reis%2C%20191%20-%20Jardim%20Itu%2C%20Porto%20Alegre%20-%20RS%2C%2091225-320!5e0!3m2!1spt-BR!2sbr!4v1721617260027!5m2!1spt-BR!2sbr2" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#inicio">
+                <img src="maicon.aquecedores.png" alt="Logo Global Aquecedores" class="logo" style="filter: brightness(0) invert(1);">
+            </a>
+            <div class="social-links">
+                <a href="https://facebook.com/GlobaAquecedores" target="_blank" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/global_aquecedores1" target="_blank" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5551985519090" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <p class="footer-text">© <span id="current-year"></span> Global Aquecedores. Todos os direitos reservados.</p>
+        <p class="footer-text">Desenvolvido por <a href="https://seusite.com" target="_blank">Valentim Wiggers</a></p>
+    </footer>
+
+    <a href="https://wa.me/5551985519090" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
             const menuToggleBtn = document.getElementById('menu-toggle-btn');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
@@ -369,7 +452,6 @@
             if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileMenu);
             mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-            // FAQ Accordion Logic
             document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
                 pergunta.addEventListener('click', () => {
                     const resposta = pergunta.nextElementSibling;
@@ -382,7 +464,8 @@
                 });
             });
 
-            // Fade-in animation on scroll
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
