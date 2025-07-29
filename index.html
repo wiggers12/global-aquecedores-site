@@ -1,519 +1,134 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MN34973B');</script>
-<meta charset="utf-8"/>
-<meta content="O2hL5Xlo8dp8-r-Ckgd5ZYXaf6jjnhZZHRYxL7XYkZY" name="google-site-verification">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Global Aquecedores | Aquecedores a Gás em Porto Alegre</title>
-<meta content="Global Aquecedores: Especialistas em instalação, manutenção, conserto e venda de aquecedores a gás em Porto Alegre e região." name="description"/>
-<link href="maicon.aquecedores.png" rel="icon" type="image/png"/>
-<link href="maicon.aquecedores.png" rel="apple-touch-icon"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
-<style>
-        :root {
-            --cor-azul-escuro: #0a2540;
-            --cor-azul-claro: #007bff;
-            --cor-amarelo: #ffc107;
-            --cor-dourado: #ffb300;
-            --cor-fundo: #FFFFFF;
-            --cor-fundo-secao: #f0f4f9; /* Tom de cinza azulado claro */
-            --cor-texto: #343a40;
-            --cor-texto-claro: #FFFFFF;
-            --cor-borda-card: #dee2e6;
-            --fonte-principal: 'Roboto', sans-serif;
-            --sombra-card: 0 10px 30px rgba(0, 0, 0, 0.07);
-            --sombra-card-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Aquecedores - Aquecedores a Gás em Porto Alegre</title>
+  <meta name="description" content="Instalação, manutenção e venda de aquecedores a gás em Porto Alegre. Serviços com garantia, segurança e rapidez. Peça seu orçamento agora.">
+  <meta name="keywords" content="aquecedores a gás, instalação de aquecedores, manutenção de aquecedores, aquecedor em Porto Alegre, assistência técnica gás">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body {
-            font-family: var(--fonte-principal);
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            line-height: 1.7;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        h1, h2, h3 { color: var(--cor-azul-escuro); font-weight: 700; }
-        h2 { font-size: 2.8rem; text-align: center; margin-bottom: 60px; font-weight: 900; }
-        h3 { font-size: 1.5rem; margin-bottom: 15px; }
+  <!-- HEADER -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <img src="logo.png" alt="Logo Global Aquecedores" class="h-10">
+      <nav class="space-x-4 text-sm md:text-base font-medium">
+        <a href="#servicos">Serviços</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#certificacoes">Certificações</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="text-indigo-700 font-bold text-sm md:text-base">(51) 98551-9090</div>
+    </div>
+  </header>
 
-        .header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 15px 0;
-            position: sticky; top: 0; z-index: 1000;
-        }
-        .header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { height: 50px; width: auto; object-fit: contain; }
-        .nav-links a {
-            color: var(--cor-azul-escuro); margin: 0 15px; font-weight: 500;
-            text-decoration: none; padding: 8px 0;
-            position: relative; transition: color 0.3s ease;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute;
-            width: 0; height: 2px; bottom: 0; left: 50%;
-            background-color: var(--cor-azul-claro);
-            transition: all 0.3s ease;
-        }
-        .nav-links a:hover { color: var(--cor-azul-claro); }
-        .nav-links a:hover::after { width: 100%; left: 0; }
+  <!-- HERO -->
+  <section class="bg-white py-12 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Aquecedores a Gás em Porto Alegre</h1>
+      <p class="text-lg md:text-xl mb-6">Especialistas em <strong>instalação</strong>, <strong>manutenção</strong> e venda de <strong>aquecedores a gás</strong> com qualidade e segurança.</p>
+      <a href="https://wa.me/5551985519090" class="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-lg shadow">
+        Solicitar Orçamento via WhatsApp
+      </a>
+    </div>
+  </section>
 
-        .header-contato { display: flex; align-items: center; font-weight: 700; font-size: 1.1rem; color: var(--cor-azul-escuro); }
-        .header-contato i { color: var(--cor-amarelo); margin-right: 8px; }
-        
-        .menu-toggle { display: none; font-size: 1.8rem; background: none; border: none; color: var(--cor-azul-escuro); cursor: pointer; }
-        .mobile-nav-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1001; }
-        .mobile-nav { position: fixed; top: 0; right: 0; width: 250px; height: 100%; background-color: var(--cor-fundo); box-shadow: -2px 0 5px rgba(0,0,0,0.2); transform: translateX(100%); transition: transform 0.3s ease-out; z-index: 1002; padding: 20px; }
-        .mobile-nav.active { transform: translateX(0); }
-        .mobile-nav .close-btn { font-size: 1.8rem; background: none; border: none; color: var(--cor-azul-escuro); cursor: pointer; display: block; margin-left: auto; margin-bottom: 20px; }
-        .mobile-nav ul { list-style: none; }
-        .mobile-nav ul li a { display: block; padding: 15px 0; color: var(--cor-texto); font-weight: 500; text-decoration: none; border-bottom: 1px solid #eee; }
-        
-        #inicio {
-            padding: 80px 0;
-            display: flex; align-items: center; 
-            background: linear-gradient(135deg, #f0f4f9 0%, #e6e9f0 100%);
-        }
-        .hero-container { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
-        .hero-text h1 { font-size: 3.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
-        .hero-text p { font-size: 1.2rem; max-width: 500px; margin-bottom: 40px; color: #555; }
-        .hero-logo { text-align: center; }
-        .hero-logo img { max-width: 100%; height: auto; border-radius: 20px; box-shadow: var(--sombra-card-hover); }
-        
-        .cta-button {
-            background: linear-gradient(45deg, var(--cor-amarelo), var(--cor-dourado));
-            color: var(--cor-azul-escuro);
-            padding: 18px 35px; border-radius: 50px;
-            font-size: 1.2rem; font-weight: bold; text-decoration: none;
-            display: inline-flex; align-items: center; justify-content: center;
-            gap: 12px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
-            border: none;
-        }
-        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 20px rgba(255, 193, 7, 0.5); }
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4">Nossos Serviços</h2>
+      <p class="mb-6">Oferecemos soluções completas para aquecedores a gás residenciais e comerciais em Porto Alegre.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-lg font-bold mb-2">Instalação Profissional</h3>
+          <p>Garantimos instalação segura e com certificação.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-lg font-bold mb-2">Manutenção Preventiva</h3>
+          <p>Evite problemas com revisões periódicas especializadas.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-lg font-bold mb-2">Troca e Substituição</h3>
+          <p>Atualize seu aquecedor com modelos mais modernos e econômicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        section { padding: 100px 0; }
-        #servicos, #produtos, #depoimentos, #faq { background-color: var(--cor-fundo-secao); }
+  <!-- OFERTAS -->
+  <section id="ofertas" class="py-12 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-6">Ofertas Especiais</h2>
+      <p class="mb-4">Descontos exclusivos para clientes de Porto Alegre e região.</p>
+      <ul class="text-left max-w-2xl mx-auto list-disc pl-6">
+        <li>Instalação com 10% OFF até o final do mês.</li>
+        <li>Manutenção com agendamento prioritário.</li>
+        <li>Parcelamos em até 6x sem juros.</li>
+      </ul>
+    </div>
+  </section>
 
-        .card {
-            background: var(--cor-fundo); border-radius: 16px;
-            padding: 0; text-align: center;
-            box-shadow: var(--sombra-card);
-            transition: all 0.3s ease;
-            height: 100%; overflow: hidden;
-        }
-        .card:hover { transform: scale(1.03); box-shadow: var(--sombra-card-hover); }
-        .card-image { width: 100%; height: 220px; object-fit: cover; background-color: #eee; }
-        .card-content { padding: 30px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .product-card { background: var(--cor-fundo); border-radius: 16px; box-shadow: var(--sombra-card); transition: all 0.3s ease; overflow: hidden; display: flex; flex-direction: column; }
-        .product-card:hover { transform: scale(1.03); box-shadow: var(--sombra-card-hover); }
-        .product-card img { width: 100%; height: auto; }
-        .product-card-content { padding: 25px; text-align: left; flex-grow: 1; display: flex; flex-direction: column;}
-        .product-card-content h3 { font-size: 1.8rem; margin-bottom: 15px; text-align: center; }
-        .product-card-content .price-container { margin: 20px 0; text-align: center; display: flex; justify-content: center; gap: 30px; }
-        .product-card-content .price-item { display: inline-block; padding: 0 15px; border-left: 1px solid var(--cor-borda-card); }
-        .product-card-content .price-item:first-child { border-left: none; }
-        .product-card-content .price-label { font-size: 0.9rem; color: var(--cor-texto); }
-        .product-card-content .price-value { font-size: 1.8rem; font-weight: 700; color: var(--cor-azul-claro); }
-        .product-card-content .install-info { font-size: 0.8rem; text-align: center; color: #666; margin-top: auto; padding-top: 15px; }
+  <!-- MARCAS -->
+  <section id="marcas" class="py-12 bg-gray-100 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Trabalhamos com as Melhores Marcas</h2>
+      <p class="mb-4">Rinnai, Bosch, Komeco, Lorenzetti e muito mais.</p>
+    </div>
+  </section>
 
-        .marcas-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; }
-        .marca-logo { height: 50px; filter: grayscale(1); opacity: 0.6; transition: all 0.3s ease; max-width: 150px; object-fit: contain; }
-        .marca-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="py-12 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-6">O que nossos clientes dizem</h2>
+      <blockquote class="italic text-lg max-w-xl mx-auto mb-4">"Atendimento excelente, instalação rápida e com total segurança. Super recomendo a Global Aquecedores!"</blockquote>
+      <cite>– João Silva, Porto Alegre</cite>
+    </div>
+  </section>
 
-        #depoimentos .card { padding: 30px; }
-        #depoimentos .card p { font-style: italic; margin-bottom: 15px; font-size: 1.1rem; }
-        #depoimentos .card .autor { font-weight: bold; color: var(--cor-azul-claro); }
-        
-        #certificacoes { background-color: var(--cor-fundo); }
-        #certificacoes .cert-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; margin-top: 40px; }
-        #certificacoes .cert-logo { height: 80px; width: auto; object-fit: contain; opacity: 0.9; transition: all 0.3s ease; }
-        
-        #faq .faq-item { background: var(--cor-fundo); border: 1px solid var(--cor-borda-card); border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: var(--sombra-card); }
-        #faq .faq-pergunta { padding: 20px 25px; color: var(--cor-azul-escuro); font-weight: 500; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        #faq .faq-pergunta i { transition: transform 0.3s ease; }
-        #faq .faq-pergunta.active i { transform: rotate(180deg); color: var(--cor-azul-claro); }
-        #faq .faq-resposta { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-        #faq .faq-resposta p { padding: 0 25px 25px; text-align: left; }
-        
-        #contato .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: flex-start; }
-        .contact-info p { margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: flex-start; text-align: left; }
-        .contact-info i { color: var(--cor-azul-claro); margin-right: 15px; width: 25px; text-align: center; font-size: 1.3rem; margin-top: 4px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid var(--cor-borda-card); border-radius: 8px; font-family: var(--fonte-principal); font-size: 1rem; transition: all 0.3s ease; }
-        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--cor-azul-claro); box-shadow: 0 0 8px rgba(26, 115, 232, 0.2); }
-        .btn-submit { width: 100%; padding: 15px; background: linear-gradient(45deg, var(--cor-azul-claro), var(--cor-azul-escuro)); color: var(--cor-texto-claro); border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease; }
-        .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3); }
-        .map-placeholder { border-radius: 12px; overflow: hidden; box-shadow: var(--sombra-card); height: 400px; margin-top: 40px; width: 100%; }
-        .map-placeholder iframe { width: 100%; height: 100%; border: 0; }
+  <!-- CERTIFICAÇÕES -->
+  <section id="certificacoes" class="py-12 bg-gray-100 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-4">Certificações e Garantia</h2>
+      <p>Todos os nossos técnicos possuem certificações NR-35 e NR-10. Garantia de até 2 anos para instalação e assistência.</p>
+    </div>
+  </section>
 
-        .footer { background-color: var(--cor-azul-escuro); color: var(--cor-texto-claro); text-align: center; padding: 50px 20px; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; max-width: 1200px; margin: 0 auto 20px auto; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .footer .social-links { margin-top: 15px; display: flex; gap: 20px; }
-        .social-links a { color: var(--cor-texto-claro); font-size: 1.8rem; transition: color 0.3s ease, transform 0.3s ease; }
-        .social-links a:hover { color: var(--cor-amarelo); transform: translateY(-3px); }
-        .footer-text { margin-top: 30px; font-size: 0.9rem; opacity: 0.7; }
-        .footer-text a { color: var(--cor-texto-claro); text-decoration: underline; }
-        
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px;
-            background-color: #25D366; color: white;
-            width: 60px; height: 60px; border-radius: 50%;
-            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 100;
-            display: flex; justify-content: center; align-items: center;
-            transition: transform 0.3s ease;
-            animation: pulse 2.5s infinite;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); animation-play-state: paused; }
+  <!-- FAQ -->
+  <section id="faq" class="py-12 bg-white text-left">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6 text-center">Perguntas Frequentes</h2>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <div>
+          <h3 class="font-semibold">Qual a diferença entre aquecedor a gás e elétrico?</h3>
+          <p>O aquecedor a gás é mais econômico a longo prazo e tem maior vazão de água quente.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">Vocês atendem fora de Porto Alegre?</h3>
+          <p>Sim, atendemos também cidades da região metropolitana. Consulte disponibilidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-            50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
-            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        }
-        
-        .animated { opacity: 0; transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-        .slide-in-from-left { transform: translateX(-30px); }
-        .slide-in-from-right { transform: translateX(30px); }
-        .slide-in-from-bottom { transform: translateY(30px); }
-        .animated.visible { opacity: 1; transform: translateX(0) translateY(0); }
+  <!-- CONTATO -->
+  <section id="contato" class="py-12 bg-indigo-700 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-4">Entre em Contato</h2>
+      <p class="mb-6">Tire suas dúvidas ou solicite orçamento agora mesmo.</p>
+      <a href="https://wa.me/5551985519090" class="bg-white text-indigo-700 font-bold px-6 py-3 rounded shadow hover:bg-gray-200">Chamar no WhatsApp</a>
+      <p class="mt-4 text-sm">Ou ligue para (51) 98551-9090</p>
+    </div>
+  </section>
 
-        @media (max-width: 992px) {
-            .header-contato, .nav-links { display: none; }
-            .menu-toggle { display: block; }
-            .header .container { justify-content: space-between; }
-        }
-        @media (max-width: 768px) {
-            h2 { font-size: 2.2rem; } 
-            #inicio { text-align: center; }
-            .hero-container { grid-template-columns: 1fr; }
-            .hero-logo { order: -1; margin-bottom: 30px; }
-            .hero-text h1 { font-size: 2.8rem; }
-            .product-grid, .grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</meta><meta content="aquecedores, aquecedor a gás, conserto de aquecedor, instalação de aquecedores, assistência técnica, Porto Alegre" name="keywords"/><meta content="Global Aquecedores - Porto Alegre" property="og:title"/><meta content="Especialistas em aquecedores a gás. Instalação, manutenção e suporte técnico em Porto Alegre." property="og:description"/><meta content="https://globalaquecedores.agr.br/" property="og:url"/><meta content="website" property="og:type"/></head>
-<body>
-<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MN34973B" style="display:none;visibility:hidden" width="0"></iframe></noscript>
-<header class="header">
-<div class="container">
-<a href="#inicio">
-<img alt="Logo Global Aquecedores" class="logo" src="maicon.aquecedores.png"/>
-</a>
-<nav class="nav-links">
-<a href="#servicos">Serviços</a>
-<a href="#produtos">Nossas Ofertas</a>
-<a href="#marcas">Marcas</a>
-<a href="#depoimentos">Depoimentos</a>
-<a href="#certificacoes">Certificações</a>
-<a href="#faq">FAQ</a>
-<a href="#contato">Contato</a>
-</nav>
-<div class="header-contato">
-<i class="fa-solid fa-phone"></i>
-<span>(51) 98551-9090</span>
-</div>
-<button class="menu-toggle" id="menu-toggle-btn">
-<i class="fas fa-bars"></i>
-</button>
-</div>
-</header>
-<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
-<nav class="mobile-nav" id="mobile-nav">
-<button class="close-btn" id="close-mobile-nav-btn"><i class="fas fa-times"></i></button>
-<ul>
-<li><a class="mobile-nav-link" href="#inicio">Início</a></li>
-<li><a class="mobile-nav-link" href="#servicos">Serviços</a></li>
-<li><a class="mobile-nav-link" href="#produtos">Nossas Ofertas</a></li>
-<li><a class="mobile-nav-link" href="#marcas">Marcas</a></li>
-<li><a class="mobile-nav-link" href="#depoimentos">Depoimentos</a></li>
-<li><a class="mobile-nav-link" href="#certificacoes">Certificações</a></li>
-<li><a class="mobile-nav-link" href="#faq">FAQ</a></li>
-<li><a class="mobile-nav-link" href="#contato">Contato</a></li>
-</ul>
-</nav>
-<main>
-<section id="inicio">
-<div class="container hero-container">
-<div class="hero-text animated slide-in-from-left">
-<h1>Seu conforto e segurança com água quente o ano todo.</h1>
-<p>Somos especialistas em instalação, manutenção e venda de aquecedores a gás. Atendimento rápido e certificado em Porto Alegre e região.</p>
-<a class="cta-button" href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank">
-<i class="fab fa-whatsapp"></i> Peça um Orçamento
-                    </a>
-</div>
-<div class="hero-logo animated slide-in-from-right">
-<img alt="Logo Global Aquecedores em destaque" src="maicon.aquecedores.png"/>
-</div>
-</div>
-</section>
-<section id="produtos">
-<div class="container">
-<h2 class="animated slide-in-from-bottom">Nossas Ofertas de Aquecedores</h2>
-<div class="product-grid">
-<div class="product-card animated slide-in-from-bottom">
-<img alt="Aquecedor Komeco 16 WH Home" src="IMG-20250721-WA0014.jpg"/>
-<div class="product-card-content">
-<h3>KOMECO 16 WH HOME</h3>
-<div class="price-container">
-<div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$2.100</div></div>
-<div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$2.300</div></div>
-</div>
-<p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
-</div>
-</div>
-<div class="product-card animated slide-in-from-bottom">
-<img alt="Aquecedor Komeco 21D Home" src="IMG-20250721-WA0015.jpg"/>
-<div class="product-card-content">
-<h3>KOMECO 21 D HOME</h3>
-<div class="price-container">
-<div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$2.400</div></div>
-<div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$2.600</div></div>
-</div>
-<p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
-</div>
-</div>
-<div class="product-card animated slide-in-from-bottom">
-<img alt="Aquecedor Komeco 26 WH Home" src="IMG-20250721-WA0017.jpg"/>
-<div class="product-card-content">
-<h3>KOMECO 26 WH HOME</h3>
-<div class="price-container">
-<div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$3.200</div></div>
-<div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$3.350</div></div>
-</div>
-<p class="install-info">Valor com instalação inclusa. Garantia de 3 anos.</p>
-</div>
-</div>
-<div class="product-card animated slide-in-from-bottom">
-<img alt="Aquecedor Komeco 15M Slim" src="IMG-20250721-WA0018.jpg"/>
-<div class="product-card-content">
-<h3>KOMECO 15M SLIM</h3>
-<div class="price-container">
-<div class="price-item"><span class="price-label">À vista</span><div class="price-value">R$1.900</div></div>
-<div class="price-item"><span class="price-label">Cartão</span><div class="price-value">R$2.000</div></div>
-</div>
-<p class="install-info">Valor com instalação inclusa.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="servicos">
-<div class="container">
-<h2 class="animated slide-in-from-bottom">Serviços Especializados</h2>
-<div class="grid">
-<div class="card animated slide-in-from-bottom">
-<img alt="Instalação de Aquecedor a gás" class="card-image" src="servico-instalacao.jpg"/>
-<div class="card-content">
-<h3>Instalação Profissional</h3>
-<p>Instalação de aquecedores a gás de todas as marcas, seguindo as mais rigorosas normas de segurança.</p>
-</div>
-</div>
-<div class="card animated slide-in-from-bottom">
-<img alt="Manutenção de conexões de gás" class="card-image" src="servico-manutencao.jpg"/>
-<div class="card-content">
-<h3>Manutenção Preventiva</h3>
-<p>Evite problemas e garanta a eficiência do seu equipamento com nossa revisão completa.</p>
-</div>
-</div>
-<div class="card animated slide-in-from-bottom">
-<img alt="Conserto de Aquecedor moderno" class="card-image" src="servico-conserto.jpg"/>
-<div class="card-content">
-<h3>Conserto de Aquecedores</h3>
-<p>Nossa equipe técnica é especializada para diagnosticar e resolver qualquer problema de forma rápida.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="marcas">
-<div class="container">
-<h2 class="animated slide-in-from-bottom">Trabalhamos com as Melhores Marcas</h2>
-<div class="marcas-grid animated slide-in-from-bottom">
-<img alt="Logo Rheem" class="marca-logo" src="https://placehold.co/150x60/333333/FFFFFF?text=Rheem"/>
-<img alt="Logo Rinnai" class="marca-logo" src="https://placehold.co/150x60/333333/FFFFFF?text=Rinnai"/>
-<img alt="Logo Lorenzetti" class="marca-logo" src="https://placehold.co/150x60/333333/FFFFFF?text=Lorenzetti"/>
-<img alt="Logo Bosch" class="marca-logo" src="https://placehold.co/150x60/333333/FFFFFF?text=Bosch"/>
-<img alt="Logo Komeco" class="marca-logo" src="https://placehold.co/150x60/333333/FFFFFF?text=Komeco"/>
-</div>
-</div>
-</section>
-<section id="depoimentos">
-<div class="container">
-<h2 class="animated slide-in-from-bottom">O Que Nossos Clientes Dizem</h2>
-<div class="grid">
-<div class="card animated slide-in-from-bottom">
-<p>"Serviço excelente e rápido! Meu aquecedor voltou a funcionar perfeitamente. Recomendo a Global Aquecedores!"</p>
-<div class="autor">- Ana Paula, Porto Alegre</div>
-</div>
-<div class="card animated slide-in-from-bottom">
-<p>"Técnicos muito atenciosos e profissionais. Resolveram meu problema de forma eficiente e com preço justo."</p>
-<div class="autor">- Carlos Eduardo, Canoas</div>
-</div>
-<div class="card animated slide-in-from-bottom">
-<p>"Atendimento nota 10, desde o primeiro contato até a finalização do serviço. Confiança total na equipe."</p>
-<div class="autor">- Mariana S., São Leopoldo</div>
-</div>
-</div>
-</div>
-</section>
-<section id="certificacoes">
-<div class="container">
-<h2 class="animated slide-in-from-bottom">Qualidade e Segurança Certificada</h2>
-<p class="animated slide-in-from-bottom" style="text-align: center; margin-bottom: 40px;">Somos autorizados pelas principais entidades e fabricantes, garantindo serviços com a máxima segurança.</p>
-<div class="marcas-grid animated slide-in-from-bottom">
-<img alt="Selo ABNT" class="cert-logo" src="https://placehold.co/120x80/0D47A1/FFFFFF?text=ABNT"/>
-<img alt="Selo INMETRO" class="cert-logo" src="https://placehold.co/120x80/0D47A1/FFFFFF?text=INMETRO"/>
-<img alt="Selo de Autorizado" class="cert-logo" src="https://placehold.co/120x80/0D47A1/FFFFFF?text=Autorizado"/>
-</div>
-</div>
-</section>
-<section id="faq">
-<div class="container" style="max-width: 800px;">
-<h2 class="animated slide-in-from-bottom">Perguntas Frequentes</h2>
-<div class="faq-item animated slide-in-from-bottom">
-<div class="faq-pergunta">O que é um aquecedor a gás? <i class="fas fa-chevron-down"></i></div>
-<div class="faq-resposta"><p>É um equipamento que utiliza gás (GN ou GLP) para aquecer a água que será utilizada em chuveiros, torneiras e outros pontos da residência.</p></div>
-</div>
-<div class="faq-item animated slide-in-from-bottom">
-<div class="faq-pergunta">Qual a importância da manutenção preventiva? <i class="fas fa-chevron-down"></i></div>
-<div class="faq-resposta"><p>A manutenção preventiva garante a segurança, prolonga a vida útil do aparelho, otimiza o consumo de gás e evita falhas inesperadas. É recomendada anualmente.</p></div>
-</div>
-<div class="faq-item animated slide-in-from-bottom">
-<div class="faq-pergunta">Vocês atendem em toda a Região Metropolitana? <i class="fas fa-chevron-down"></i></div>
-<div class="faq-resposta"><p>Sim, a Global Aquecedores atende Porto Alegre e toda a região metropolitana. Entre em contato para verificar a disponibilidade em sua localidade.</p></div>
-</div>
-</div>
-</section>
-<section id="contato">
-<div class="container">
-<h2 class="animated slide-in-from-bottom">Entre em Contato</h2>
-<div class="contact-grid">
-<div class="contact-info animated slide-in-from-left">
-<h3>Informações de Contato</h3>
-<p><i class="fas fa-phone-alt"></i> (51) 98551-9090 (Michael Machado)</p>
-<p><a href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank"><i class="fab fa-whatsapp"></i> (51) 98551-9090 (WhatsApp)</a></p>
-<p><i class="fas fa-envelope"></i> contato@globalaquecedores.com.br</p>
-<p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Lindomar dos Reis, 191, Jardim Itu, Porto Alegre - RS, CEP 91225-320</p>
-<p><i class="fas fa-clock"></i> Horário: Seg-Sex: 8h-20h | Sáb: 8h-12h</p>
-<p><i class="fas fa-id-card"></i> CNPJ: 54.806.216/0001-78</p>
-</div>
-<div class="contact-form animated slide-in-from-right">
-<h3>Ou envie uma mensagem</h3>
-<form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
-<input name="name" placeholder="Seu Nome" required="" type="text"/>
-<input name="email" placeholder="Seu E-mail" required="" type="email"/>
-<input name="phone" placeholder="(XX) XXXXX-XXXX" required="" type="tel"/>
-<textarea name="message" placeholder="Sua Mensagem..." required="" rows="5"></textarea>
-<button class="btn-submit" type="submit">Enviar Mensagem</button>
-</form>
-</div>
-</div>
-<div class="map-placeholder animated slide-in-from-bottom">
-<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="http://googleusercontent.com/maps.google.com/9" style="border:0;" width="600"></iframe>
-</div>
-</div>
-</section>
-</main>
-<footer class="footer">
-<div class="footer-content">
-<a href="#inicio">
-<img alt="Logo Global Aquecedores" class="logo" src="maicon.aquecedores.png" style="filter: brightness(0) invert(1);"/>
-</a>
-<div class="social-links">
-<a aria-label="Facebook" href="https://facebook.com/GlobaAquecedores" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-<a aria-label="Instagram" href="https://instagram.com/global_aquecedores1" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-<a aria-label="WhatsApp" href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-</div>
-</div>
-<p class="footer-text">© <span id="current-year"></span> Global Aquecedores. Todos os direitos reservados.</p>
-<p class="footer-text">Desenvolvido por <a href="https://seusite.com" target="_blank">Valentim Wiggers</a></p>
-</footer>
-<a aria-label="Fale conosco no WhatsApp" class="whatsapp-float" href="https://wa.me/5551985519090?text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20ou%20or%C3%A7amento." target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-<script type="module">
-        // Importa as funções que você precisa dos SDKs
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm">
+    &copy; 2025 Global Aquecedores - Porto Alegre. Todos os direitos reservados.
+  </footer>
 
-        // A configuração do Firebase para o seu aplicativo da web
-        const firebaseConfig = {
-          apiKey: "AizaSyDp5dc9ksD1WeUNXLSWvuvII9TPp6ywk",
-          authDomain: "globalaquecedores-39313.firebaseapp.com",
-          projectId: "globalaquecedores-39313",
-          storageBucket: "globalaquecedores-39313.firebasestorage.app",
-          messagingSenderId: "618557261490",
-          appId: "1:618557261490:web:973b3af092f83060a46bab",
-          measurementId: "G-39X6BBGJ02"
-        };
-
-        // Inicializa o Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggleBtn = document.getElementById('menu-toggle-btn');
-            const mobileNav = document.getElementById('mobile-nav');
-            const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-            const closeMobileNavBtn = document.getElementById('close-mobile-nav-btn');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-            function openMobileMenu() {
-                if (mobileNav) mobileNav.classList.add('active');
-                if (mobileNavOverlay) mobileNavOverlay.style.display = 'block';
-            }
-            function closeMobileMenu() {
-                if (mobileNav) mobileNav.classList.remove('active');
-                if (mobileNavOverlay) mobileNavOverlay.style.display = 'none';
-            }
-
-            if (menuToggleBtn) menuToggleBtn.addEventListener('click', openMobileMenu);
-            if (closeMobileNavBtn) closeMobileNavBtn.addEventListener('click', closeMobileMenu);
-            if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileMenu);
-            mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
-
-            document.querySelectorAll('.faq-pergunta').forEach(pergunta => {
-                pergunta.addEventListener('click', () => {
-                    const resposta = pergunta.nextElementSibling;
-                    pergunta.classList.toggle('active');
-                    if (pergunta.classList.contains('active')) {
-                        resposta.style.maxHeight = resposta.scrollHeight + 'px';
-                    } else {
-                        resposta.style.maxHeight = '0';
-                    }
-                });
-            });
-
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.animated').forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
 </body>
 </html>
