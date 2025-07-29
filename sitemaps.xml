@@ -3,19 +3,49 @@
   <url>
     <loc>https://globalaquecedores.agr.br/</loc>
     <lastmod>2025-07-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/sobre.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <loc>https://globalaquecedores.agr.br/#servicos</loc>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/contato.html</loc>
-    <lastmod>2025-07-25</lastmod>
+    <loc>https://globalaquecedores.agr.br/#produtos</loc>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://globalaquecedores.agr.br/#marcas</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalaquecedores.agr.br/#depoimentos</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalaquecedores.agr.br/#certificacoes</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalaquecedores.agr.br/#faq</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://globalaquecedores.agr.br/#contato</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 </urlset>
