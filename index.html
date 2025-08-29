@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Aquecedores | Aquecedores a Gás em Porto Alegre – Instalação, Manutenção e Venda</title>
+  <meta name="description" content="Aquecedores a gás em Porto Alegre e região. Instalação, manutenção e venda com segurança e agilidade. Fale no WhatsApp e solicite seu orçamento agora."/>
+  <link rel="canonical" href="https://globalaquecedores.agr.br/"/>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Global Aquecedores | Aquecedores a Gás em Porto Alegre"/>
+  <meta property="og:description" content="Instalação, manutenção e venda de aquecedores a gás. Atendimento em Porto Alegre e região metropolitana."/>
+  <meta property="og:url" content="https://globalaquecedores.agr.br/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://globalaquecedores.agr.br/img/og-cover.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png"/>
+
+  <!-- Google Tag Manager (substitua pelo ID correto, mantive o usado anteriormente) -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MN34973B'); /* <-- confirme este ID */
+  </script>
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f141a;
+      --bg-2:#141b22;
+      --card:#18222c;
+      --brand:#ff7a00; /* laranja energia/ação */
+      --brand-2:#0091ff; /* azul confiança */
+      --text:#eaf2f8;
+      --muted:#a9b4bf;
+      --ok:#15c27a;
+      --shadow: 0 10px 30px rgba(0,0,0,.3);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1200px,92%);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--brand),#ff9f43);color:#1b1b1b;border:none;padding:14px 20px;border-radius:14px;font-weight:700;box-shadow:var(--shadow);transition:.25s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--brand);box-shadow:none}
+    .badge{display:inline-block;background:rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600;font-size:.85rem}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,20,26,.65);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:12px 0}
+    .nav img.logo{height:42px}
+    nav a{padding:10px 12px;color:var(--muted);font-weight:600;border-radius:10px}
+    nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+    .menu{display:flex;gap:.25rem;flex-wrap:wrap}
+    .burger{display:none}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding:60px 0}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:10px 0 16px}
+    .hero p{color:var(--muted);font-size:1.05rem}
+    .hero-visual{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+    .hero-visual::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 70% -10%,rgba(0,145,255,.18),transparent 60%),radial-gradient(700px 300px at 20% 110%,rgba(255,122,0,.18),transparent 60%)}
+    .hero-visual img{aspect-ratio:4/3;object-fit:cover}
+    .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+    /* Grid serviços */
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    section{padding:56px 0}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:.25s}
+    .card:hover{transform:translateY(-4px)}
+    .card h3{margin:10px 0 8px}
+
+    /* Carrossel Ofertas */
+    .carousel{position:relative}
+    .track{display:flex;gap:16px;overflow:hidden;scroll-behavior:smooth}
+    .item{min-width:280px;flex:0 0 calc(33.333% - 10.7px);background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px}
+    .item .price{font-weight:700;color:#ffe0c2}
+    .carousel .navbtn{position:absolute;top:50%;translate:0 -50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(6px);border-radius:12px;padding:10px;cursor:pointer}
+    .carousel .prev{left:-8px} .carousel .next{right:-8px}
+    .item ul{margin:10px 0 0 18px;color:var(--muted)}
+
+    /* Marcas */
+    .brands{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-items:center;filter:grayscale(1);opacity:.8}
+    .brands img{max-height:38px;margin-inline:auto}
+    .brands img:hover{filter:none;opacity:1}
+
+    /* Depoimentos */
+    .quotes{position:relative;overflow:hidden}
+    .quotes .q{display:none}
+    .quotes .q.active{display:block}
+    blockquote{font-size:1.05rem;line-height:1.6;color:#dfe7ee}
+
+    /* Certificações */
+    .badges{display:flex;gap:12px;flex-wrap:wrap}
+    .badge-chip{background:rgba(0,145,255,.12);color:#d3ebff;border:1px solid rgba(0,145,255,.25)}
+
+    /* FAQ */
+    details{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px}
+    details+details{margin-top:12px}
+    summary{cursor:pointer;font-weight:700}
+    details p{color:var(--muted);margin-top:10px}
+
+    /* Contato */
+    form{display:grid;gap:12px}
+    input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0d1319;color:var(--text);outline:none}
+    input::placeholder,textarea::placeholder{color:#8ea2b5}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .success{display:none;margin-top:10px;color:var(--ok);font-weight:700}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:28px 0;color:var(--muted)}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+    /* WhatsApp flutuante */
+    .wpp-float{position:fixed;right:18px;bottom:18px;z-index:60;display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0b2817;border-radius:999px;padding:12px 14px;font-weight:800;box-shadow:var(--shadow)}
+    .wpp-float img{width:22px;height:22px}
+
+    /* Animações simples */
+    .reveal{opacity:0;transform:translateY(12px);transition:.6s}
+    .reveal.in{opacity:1;transform:none}
+
+    /* Responsivo */
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr;gap:24px;padding:36px 0}
+      .brands{grid-template-columns:repeat(3,1fr)}
+      .grid-3{grid-template-columns:1fr}
+      .item{flex-basis:calc(100% - 16px)}
+      nav{display:none}
+      .burger{display:block;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:10px}
+      .menu-mobile{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg-2);border-bottom:1px solid rgba(255,255,255,.06)}
+      .menu-mobile a{display:block;padding:14px 20px;border-top:1px solid rgba(255,255,255,.06)}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN34973B"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#topo" aria-label="Global Aquecedores">
+        <img class="logo" src="img/logo.png" alt="Logo Global Aquecedores" />
+      </a>
+
+      <nav aria-label="principal">
+        <div class="menu">
+          <a href="#servicos">Serviços</a>
+          <a href="#ofertas">Ofertas</a>
+          <a href="#marcas">Marcas</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#certificacoes">Certificações</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </nav>
+
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu-mobile">Menu</button>
+    </div>
+    <div class="menu-mobile container" id="menu-mobile" role="dialog" aria-modal="true" aria-label="Menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#certificacoes">Certificações</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="topo" class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="badge">Porto Alegre & Região Metropolitana</span>
+        <h1>Banho quente com segurança e eficiência.<br/>Instalação, manutenção e venda de <span style="color:#ffd699">aquecedores a gás</span>.</h1>
+        <p>Equipe especializada, atendimento rápido e serviço dentro das normas. Fale agora mesmo no WhatsApp e receba seu orçamento.</p>
+        <div style="display:flex;gap:12px;margin-top:18px">
+          <a class="btn" id="cta-hero" href="https://wa.me/5551985519090" target="_blank" rel="noopener">
+            Solicitar Orçamento
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="#1b1b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#ofertas">Ver Ofertas</a>
+        </div>
+        <div class="pills">
+          <span class="badge">Atendimento rápido</span>
+          <span class="badge">Equipe certificada</span>
+          <span class="badge">Garantia e pós-venda</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <picture>
+          <source srcset="img/hero.webp" type="image/webp"/>
+          <img src="img/hero.jpg" alt="Instalação profissional de aquecedor a gás" loading="eager" />
+        </picture>
+      </div>
+    </div>
+  </main>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <div class="container">
+      <h2 class="reveal">Nossos Serviços</h2>
+      <div class="grid grid-3" style="margin-top:18px">
+        <article class="card reveal">
+          <h3>Instalação de Aquecedores</h3>
+          <p class="muted">Instalação segura e dentro das normas, com materiais adequados e teste completo de funcionamento.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Manutenção Especializada</h3>
+          <p class="muted">Revisões preventivas e corretivas, limpeza de câmara, verificação de exaustão e troca de componentes.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Venda e Consultoria</h3>
+          <p class="muted">Ajudamos a escolher o modelo ideal para seu imóvel: litragem, consumo e tipo de exaustão.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ofertas: Carrossel -->
+  <section id="ofertas">
+    <div class="container">
+      <h2 class="reveal">Ofertas e Modelos</h2>
+      <p class="muted">Seleção de aquecedores para diferentes perfis de uso. Consulte disponibilidade e valores.</p>
+
+      <div class="carousel" style="margin-top:16px">
+        <button class="navbtn prev" aria-label="Anterior" id="prev">‹</button>
+        <div class="track" id="track" aria-live="polite">
+          <!-- Card 1 -->
+          <article class="item reveal">
+            <picture>
+              <source srcset="img/modelo-16l.webp" type="image/webp"/>
+              <img src="img/modelo-16l.jpg" loading="lazy" alt="Aquecedor a gás 16 litros"/>
+            </picture>
+            <h3>Aquecedor 16 L</h3>
+            <div class="price">Sob consulta</div>
+            <ul>
+              <li>Indicado para 1 ducha</li>
+              <li>Acendimento automático</li>
+              <li>Exaustão forçada</li>
+            </ul>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn" href="https://wa.me/5551985519090?text=Olá%2C%20tenho%20interesse%20no%20Aquecedor%2016L.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Quero este</a>
+              <a class="btn btn-outline" href="#contato">Tirar dúvidas</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="item reveal">
+            <picture>
+              <source srcset="img/modelo-20l.webp" type="image/webp"/>
+              <img src="img/modelo-20l.jpg" loading="lazy" alt="Aquecedor a gás 20 litros"/>
+            </picture>
+            <h3>Aquecedor 20 L</h3>
+            <div class="price">Sob consulta</div>
+            <ul>
+              <li>Atende 1–2 duchas</li>
+              <li>Chama modulante</li>
+              <li>Sensor de chama</li>
+            </ul>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn" href="https://wa.me/5551985519090?text=Olá%2C%20tenho%20interesse%20no%20Aquecedor%2020L.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Quero este</a>
+              <a class="btn btn-outline" href="#contato">Tirar dúvidas</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="item reveal">
+            <picture>
+              <source srcset="img/modelo-26l.webp" type="image/webp"/>
+              <img src="img/modelo-26l.jpg" loading="lazy" alt="Aquecedor a gás 26 litros"/>
+            </picture>
+            <h3>Aquecedor 26 L</h3>
+            <div class="price">Sob consulta</div>
+            <ul>
+              <li>Atende até 2 duchas</li>
+              <li>Alta vazão</li>
+              <li>Display digital</li>
+            </ul>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn" href="https://wa.me/5551985519090?text=Olá%2C%20tenho%20interesse%20no%20Aquecedor%2026L.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Quero este</a>
+              <a class="btn btn-outline" href="#contato">Tirar dúvidas</a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="item reveal">
+            <picture>
+              <source srcset="img/modelo-slim.webp" type="image/webp"/>
+              <img src="img/modelo-slim.jpg" loading="lazy" alt="Aquecedor a gás compacto slim"/>
+            </picture>
+            <h3>Compacto Slim</h3>
+            <div class="price">Sob consulta</div>
+            <ul>
+              <li>Design compacto</li>
+              <li>Baixo ruído</li>
+              <li>Economia de gás</li>
+            </ul>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn" href="https://wa.me/5551985519090?text=Olá%2C%20tenho%20interesse%20no%20Aquecedor%20Slim.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Quero este</a>
+              <a class="btn btn-outline" href="#contato">Tirar dúvidas</a>
+            </div>
+          </article>
+        </div>
+        <button class="navbtn next" aria-label="Próximo" id="next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marcas -->
+  <section id="marcas">
+    <div class="container">
+      <h2 class="reveal">Marcas que Trabalhamos</h2>
+      <div class="brands" style="margin-top:16px">
+        <!-- Coloque seus logos em /img/ -->
+        <img class="reveal" src="img/rinnai.png" alt="Rinnai" loading="lazy"/>
+        <img class="reveal" src="img/lorenzetti.png" alt="Lorenzetti" loading="lazy"/>
+        <img class="reveal" src="img/bosch.png" alt="Bosch" loading="lazy"/>
+        <img class="reveal" src="img/komeco.png" alt="Komeco" loading="lazy"/>
+        <img class="reveal" src="img/therm.png" alt="Therm" loading="lazy"/>
+        <img class="reveal" src="img/duchaforte.png" alt="Ducha Forte" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos">
+    <div class="container">
+      <h2 class="reveal">O que nossos clientes dizem</h2>
+      <div class="card quotes" style="margin-top:16px">
+        <div class="q active">
+          <blockquote>“Serviço impecável, muito atenciosos e rápidos. Recomendo a Global Aquecedores!” – João M.</blockquote>
+        </div>
+        <div class="q">
+          <blockquote>“Instalaram meu aquecedor com segurança e explicaram tudo. Ótimo atendimento!” – Paula S.</blockquote>
+        </div>
+        <div class="q">
+          <blockquote>“Chegaram no horário, fizeram um trabalho limpo e o banho ficou perfeito.” – Marcelo R.</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificações -->
+  <section id="certificacoes">
+    <div class="container">
+      <h2 class="reveal">Certificações e Boas Práticas</h2>
+      <p class="muted">Equipe treinada, materiais adequados e instalação conforme normas vigentes. Segurança e eficiência primeiro.</p>
+      <div class="badges" style="margin-top:12px">
+        <span class="badge badge-chip">Equipe treinada</span>
+        <span class="badge badge-chip">Exaustão correta</span>
+        <span class="badge badge-chip">Teste de estanqueidade</span>
+        <span class="badge badge-chip">Check-list de segurança</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="reveal">Perguntas Frequentes</h2>
+      <details class="reveal" open>
+        <summary>Quanto tempo leva a instalação?</summary>
+        <p>Em geral, entre 2 e 4 horas, variando conforme o modelo e o local da instalação.</p>
+      </details>
+      <details class="reveal">
+        <summary>Vocês atendem fora de Porto Alegre?</summary>
+        <p>Sim, atendemos a região metropolitana (ex.: Canoas, Gravataí, Cachoeirinha, etc.).</p>
+      </details>
+      <details class="reveal">
+        <summary>Qual o modelo ideal para o meu imóvel?</summary>
+        <p>A litragem (16, 20, 26L…) depende do número de pontos de água e da vazão desejada. Ajudamos na escolha.</p>
+      </details>
+      <details class="reveal">
+        <summary>Vocês dão garantia?</summary>
+        <p>Trabalhamos com garantia do fabricante e suporte de pós-venda para o serviço executado.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <div class="container">
+      <h2 class="reveal">Entre em Contato</h2>
+      <div class="grid" style="grid-template-columns:1.1fr .9fr;gap:16px;margin-top:12px">
+        <div class="card reveal">
+          <form id="form-contato" autocomplete="on">
+            <div class="form-row">
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required/>
+              <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone/WhatsApp" required/>
+            </div>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte rapidamente como podemos ajudar" required></textarea>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button type="submit" class="btn">Enviar no WhatsApp</button>
+              <!-- Botão alternativo: e-mail via mailto (edite o e-mail abaixo) -->
+              <a class="btn btn-outline" id="mailto" href="#" rel="noopener">Enviar por E-mail</a>
+            </div>
+            <div class="success" id="ok">✅ Mensagem preparada. Abrimos seu WhatsApp!</div>
+          </form>
+          <p style="color:var(--muted);margin-top:10px">Preferir falar direto? <a href="tel:+5551985519090">Ligar: (51) 98551-9090</a></p>
+          <p style="color:var(--muted)">Instagram: <a href="https://instagram.com/_aquecedores1" target="_blank" rel="noopener">@_aquecedores1</a></p>
+        </div>
+
+        <aside class="card reveal">
+          <h3>Atendimento</h3>
+          <p class="muted">Porto Alegre e região metropolitana.</p>
+          <p class="muted">Seg–Sáb • 8h às 19h</p>
+          <ul style="margin:10px 0 0 18px;color:var(--muted)">
+            <li>Instalação dentro das normas</li>
+            <li>Manutenção preventiva e corretiva</li>
+            <li>Orçamento rápido pelo WhatsApp</li>
+          </ul>
+          <div style="margin-top:14px">
+            <a class="btn" href="https://wa.me/5551985519090" target="_blank" rel="noopener">Falar agora</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container foot">
+      <p>© <span id="year"></span> Global Aquecedores — Porto Alegre / RS. Todos os direitos reservados.</p>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="badge" href="https://wa.me/5551985519090" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="badge" href="https://instagram.com/_aquecedores1" target="_blank" rel="noopener">Instagram</a>
+        <a class="badge" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a class="wpp-float" href="https://wa.me/5551985519090" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <img src="img/whatsapp.png" alt="" loading="lazy"/> Falar no WhatsApp
+  </a>
+
+  <!-- Dados Estruturados: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Global Aquecedores",
+    "image":"https://globalaquecedores.agr.br/img/og-cover.jpg",
+    "url":"https://globalaquecedores.agr.br/",
+    "telephone":"+55 51 98551-9090",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Porto Alegre",
+      "addressRegion":"RS",
+      "addressCountry":"BR"
+    },
+    "areaServed":["Porto Alegre","Canoas","Gravataí","Cachoeirinha"],
+    "sameAs":["https://instagram.com/_aquecedores1"]
+  }
+  </script>
+
+  <!-- Dados Estruturados: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Quanto tempo leva a instalação?","acceptedAnswer":{"@type":"Answer","text":"Em geral, entre 2 e 4 horas, variando conforme o modelo e o local da instalação."}},
+      {"@type":"Question","name":"Vocês atendem fora de Porto Alegre?","acceptedAnswer":{"@type":"Answer","text":"Sim, atendemos a região metropolitana (ex.: Canoas, Gravataí, Cachoeirinha, etc.)."}},
+      {"@type":"Question","name":"Qual o modelo ideal para o meu imóvel?","acceptedAnswer":{"@type":"Answer","text":"A litragem depende do número de pontos de água e da vazão desejada. Ajudamos na escolha do modelo."}},
+      {"@type":"Question","name":"Vocês dão garantia?","acceptedAnswer":{"@type":"Answer","text":"Trabalhamos com garantia do fabricante e suporte de pós-venda para o serviço executado."}}
+    ]
+  }
+  </script>
+
+  <!-- JS -->
+  <script defer>
+    // ====== Configs principais ======
+    const WPP = '5551985519090';
+    const EMAIL = 'contato@globalaquecedores.agr.br'; // <-- troque se quiser usar mailto
+
+    // Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const burger = document.getElementById('burger');
+    const menuMobile = document.getElementById('menu-mobile');
+    burger?.addEventListener('click', ()=>{
+      const open = menuMobile.style.display === 'block';
+      menuMobile.style.display = open ? 'none' : 'block';
+      burger.setAttribute('aria-expanded', String(!open));
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
+    },{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // Carrossel simples (autoplay + nav)
+    const track = document.getElementById('track');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let auto;
+    function go(dir=1){
+      const card = track.querySelector('.item');
+      if(!card) return;
+      const w = card.getBoundingClientRect().width + 16; // card + gap
+      track.scrollBy({left: w*dir, behavior:'smooth'});
+    }
+    function start(){ auto = setInterval(()=>go(1), 3800); }
+    function stop(){ clearInterval(auto); }
+    start();
+    [prev,next,track].forEach(el=>el.addEventListener('mouseenter', stop));
+    [prev,next,track].forEach(el=>el.addEventListener('mouseleave', start));
+    prev.addEventListener('click', ()=>go(-1));
+    next.addEventListener('click', ()=>go(1));
+
+    // Slider de depoimentos (auto)
+    const quotes = Array.from(document.querySelectorAll('.quotes .q'));
+    let qi = 0;
+    setInterval(()=>{
+      quotes[qi].classList.remove('active');
+      qi = (qi+1)%quotes.length;
+      quotes[qi].classList.add('active');
+    }, 4200);
+
+    // Formulário -> WhatsApp (e opcional mailto)
+    const form = document.getElementById('form-contato');
+    const ok = document.getElementById('ok');
+    const mailto = document.getElementById('mailto');
+
+    function encode(t){ return encodeURIComponent(t); }
+
+    function makeMessage(){
+      const nome = document.getElementById('nome').value.trim();
+      const tel = document.getElementById('telefone').value.trim();
+      const msg = document.getElementById('mensagem').value.trim();
+      const base = `Olá, sou ${nome}. Telefone/WhatsApp: ${tel}. %0A%0A${msg}%0A%0AEnviado pelo site Global Aquecedores.`;
+      return base;
+    }
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const text = makeMessage();
+      const url = `https://wa.me/${WPP}?text=${text}`;
+      window.open(url, '_blank');
+      ok.style.display = 'block';
+    });
+
+    mailto.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const subject = encode('Orçamento via site – Global Aquecedores');
+      const body = makeMessage();
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    });
+
+    // Acessibilidade: fechar menu após clique
+    document.querySelectorAll('#menu-mobile a').forEach(a=>{
+      a.addEventListener('click', ()=>{ menuMobile.style.display='none'; burger.setAttribute('aria-expanded','false'); });
+    });
+
+  </script>
+
+  <!--
+    📦 Instruções rápidas de deploy
+    1) Suba as imagens em /img/ (hero.jpg/webp, modelos, logos de marcas, whatsapp.png, favicon.png)
+    2) Confirme o ID do GTM no <head> e no <noscript>.
+    3) Ajuste EMAIL no script, se for usar mailto.
+    4) (Opcional) Adicione /sitemap.xml e /robots.txt na raiz do domínio.
+  -->
+</body>
+</html>
