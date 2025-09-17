@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://globalaquecedores.agr.br/</loc>
-    <priority>1.00</priority>
+    <loc>https://www.globalaquecedores.agr.br/</loc>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/servicos</loc>
-    <priority>0.90</priority>
+    <loc>https://www.globalaquecedores.agr.br/servicos</loc>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/ofertas</loc>
-    <priority>0.90</priority>
+    <loc>https://www.globalaquecedores.agr.br/ofertas</loc>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/marcas</loc>
-    <priority>0.80</priority>
+    <loc>https://www.globalaquecedores.agr.br/marcas</loc>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/depoimentos</loc>
-    <priority>0.80</priority>
+    <loc>https://www.globalaquecedores.agr.br/depoimentos</loc>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/certificacoes</loc>
-    <priority>0.80</priority>
+    <loc>https://www.globalaquecedores.agr.br/certificacoes</loc>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/faq</loc>
-    <priority>0.70</priority>
+    <loc>https://www.globalaquecedores.agr.br/faq</loc>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/contato</loc>
-    <priority>0.90</priority>
+    <loc>https://www.globalaquecedores.agr.br/contato</loc>
+    <priority>0.9</priority>
   </url>
 </urlset>
