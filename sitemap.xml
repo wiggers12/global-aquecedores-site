@@ -5,31 +5,31 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#servicos</loc>
+    <loc>https://globalaquecedores.agr.br/servicos</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#ofertas</loc>
+    <loc>https://globalaquecedores.agr.br/ofertas</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#marcas</loc>
+    <loc>https://globalaquecedores.agr.br/marcas</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#depoimentos</loc>
+    <loc>https://globalaquecedores.agr.br/depoimentos</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#certificacoes</loc>
+    <loc>https://globalaquecedores.agr.br/certificacoes</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#faq</loc>
+    <loc>https://globalaquecedores.agr.br/faq</loc>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://globalaquecedores.agr.br/#contato</loc>
+    <loc>https://globalaquecedores.agr.br/contato</loc>
     <priority>0.90</priority>
   </url>
 </urlset>
