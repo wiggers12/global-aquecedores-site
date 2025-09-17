@@ -1,3 +1,7 @@
+# Bloqueia diretórios que não precisa indexar (se existirem)
 User-agent: *
+Disallow: /admin/
+Disallow: /temp/
+
 Allow: /
 Sitemap: https://www.globalaquecedores.agr.br/sitemap.xml
