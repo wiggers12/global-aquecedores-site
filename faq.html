@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perguntas Frequentes (FAQ) | Global Aquecedores Porto Alegre</title>
+  <meta name="description" content="Tire suas dúvidas sobre instalação, manutenção e venda de aquecedores a gás. Atendimento em Porto Alegre e região metropolitana."/>
+
+  <link rel="canonical" href="https://www.globalaquecedores.agr.br/faq"/>
+  <link rel="icon" href="img/favicon.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{margin:0;font-family:'Montserrat',sans-serif;background:#0f141a;color:#eaf2f8}
+    header,footer{background:#141b22;padding:16px}
+    header nav a, footer a{color:#a9b4bf;text-decoration:none;margin:0 10px;font-weight:600}
+    header nav a:hover, footer a:hover{color:#fff}
+    .container{width:min(1100px,92%);margin:auto;padding:20px 0}
+    h1{font-size:2rem;margin-bottom:12px}
+    details{background:#18222c;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;margin-top:12px}
+    summary{cursor:pointer;font-weight:700}
+    details p{margin-top:10px;color:#a9b4bf}
+    footer{color:#a9b4bf;text-align:center;margin-top:30px}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="marcas.html">Marcas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a href="certificacoes.html">Certificações</a>
+      <a href="faq.html" style="color:#fff">FAQ</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h1>Perguntas Frequentes</h1>
+    <p style="color:#a9b4bf">Reunimos as principais dúvidas de nossos clientes sobre instalação, manutenção e venda de aquecedores a gás.</p>
+
+    <details open>
+      <summary>Quanto tempo leva a instalação?</summary>
+      <p>Em geral, entre 2 e 4 horas, variando conforme o modelo e o local da instalação.</p>
+    </details>
+
+    <details>
+      <summary>Vocês atendem fora de Porto Alegre?</summary>
+      <p>Sim, atendemos a região metropolitana (ex.: Canoas, Gravataí, Cachoeirinha, entre outras cidades).</p>
+    </details>
+
+    <details>
+      <summary>Qual o modelo ideal para o meu imóvel?</summary>
+      <p>A litragem (16L, 20L, 26L…) depende do número de pontos de água e da vazão desejada. Nossa equipe auxilia na escolha do modelo mais adequado.</p>
+    </details>
+
+    <details>
+      <summary>Vocês dão garantia?</summary>
+      <p>Sim. Trabalhamos com garantia do fabricante e oferecemos suporte de pós-venda para os serviços executados.</p>
+    </details>
+
+    <details>
+      <summary>É necessário fazer manutenção periódica?</summary>
+      <p>Sim. Recomendamos manutenção preventiva a cada 12 meses para garantir segurança, eficiência e prolongar a vida útil do aquecedor.</p>
+    </details>
+
+    <details>
+      <summary>Vocês usam peças originais?</summary>
+      <p>Sim. Utilizamos apenas peças e componentes originais das marcas com as quais trabalhamos.</p>
+    </details>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Global Aquecedores — Porto Alegre / RS</p>
+    <div>
+      <a href="https://wa.me/5551985519090" target="_blank">WhatsApp</a> |
+      <a href="https://instagram.com/_aquecedores1" target="_blank">Instagram</a> |
+      <a href="faq.html">FAQ</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Dados Estruturados (FAQ Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Quanto tempo leva a instalação?","acceptedAnswer":{"@type":"Answer","text":"Entre 2 e 4 horas, conforme modelo e local."}},
+      {"@type":"Question","name":"Vocês atendem fora de Porto Alegre?","acceptedAnswer":{"@type":"Answer","text":"Sim, região metropolitana incluindo Canoas, Gravataí, Cachoeirinha e outras."}},
+      {"@type":"Question","name":"Qual o modelo ideal para o meu imóvel?","acceptedAnswer":{"@type":"Answer","text":"A litragem depende do número de pontos de água e da vazão desejada."}},
+      {"@type":"Question","name":"Vocês dão garantia?","acceptedAnswer":{"@type":"Answer","text":"Sim, garantia do fabricante e suporte de pós-venda."}},
+      {"@type":"Question","name":"É necessário fazer manutenção periódica?","acceptedAnswer":{"@type":"Answer","text":"Sim, manutenção preventiva a cada 12 meses."}},
+      {"@type":"Question","name":"Vocês usam peças originais?","acceptedAnswer":{"@type":"Answer","text":"Sim, utilizamos peças e componentes originais."}}
+    ]
+  }
+  </script>
+</body>
+</html>
