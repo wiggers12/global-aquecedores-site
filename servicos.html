@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serviços | Instalação e Manutenção de Aquecedores a Gás em Porto Alegre</title>
+  <meta name="description" content="Instalação, manutenção e venda de aquecedores a gás em Porto Alegre e região metropolitana. Equipe especializada e atendimento rápido."/>
+  
+  <link rel="canonical" href="https://www.globalaquecedores.agr.br/servicos"/>
+  <link rel="icon" href="img/favicon.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{margin:0;font-family:'Montserrat',sans-serif;background:#0f141a;color:#eaf2f8}
+    header,footer{background:#141b22;padding:16px}
+    header nav a, footer a{color:#a9b4bf;text-decoration:none;margin:0 10px;font-weight:600}
+    header nav a:hover, footer a:hover{color:#fff}
+    .container{width:min(1100px,92%);margin:auto;padding:20px 0}
+    h1{font-size:2rem;margin-bottom:12px}
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:#18222c;padding:20px;border-radius:14px;transition:.25s}
+    .card:hover{transform:translateY(-3px)}
+    footer{color:#a9b4bf;text-align:center}
+    .muted{color:#a9b4bf}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servicos.html" style="color:#fff">Serviços</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="marcas.html">Marcas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a href="certificacoes.html">Certificações</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h1>Nossos Serviços</h1>
+    <p class="muted">Atendemos Porto Alegre e região metropolitana com instalação segura, manutenção preventiva e venda de aquecedores a gás.</p>
+
+    <div class="grid grid-3" style="margin-top:20px">
+      <article class="card">
+        <h2>Instalação de Aquecedores</h2>
+        <p>Instalação segura e dentro das normas, com materiais adequados e teste completo de funcionamento.</p>
+      </article>
+
+      <article class="card">
+        <h2>Manutenção Especializada</h2>
+        <p>Revisões preventivas e corretivas, limpeza de câmara, verificação de exaustão e troca de componentes.</p>
+      </article>
+
+      <article class="card">
+        <h2>Venda e Consultoria</h2>
+        <p>Ajudamos a escolher o modelo ideal para seu imóvel: litragem, consumo e tipo de exaustão.</p>
+      </article>
+    </div>
+
+    <div style="margin-top:30px">
+      <a href="contato.html" style="background:#ff7a00;color:#111;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none">Solicitar Orçamento</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Global Aquecedores — Porto Alegre / RS</p>
+    <div>
+      <a href="https://wa.me/5551985519090" target="_blank">WhatsApp</a> |
+      <a href="https://instagram.com/_aquecedores1" target="_blank">Instagram</a> |
+      <a href="faq.html">FAQ</a>
+    </div>
+  </footer>
+
+  <script>
+    // Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
