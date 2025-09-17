@@ -14,120 +14,115 @@
     gtag('config', 'AW-17389745602');
   </script>
 
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MN34973B');
+  </script>
+  <!-- End GTM -->
+
   <meta name="description" content="Instalação, manutenção e venda de aquecedores a gás em Porto Alegre e região metropolitana. Atendimento rápido e seguro.">
   <link rel="canonical" href="https://globalaquecedores.agr.br/"/>
   <link rel="icon" href="img/favicon.png" type="image/png"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body{margin:0;font-family:'Montserrat',sans-serif;background:#0f141a;color:#eaf2f8;line-height:1.6}
-    header{background:#141b22;position:sticky;top:0;z-index:100}
-    .nav{display:flex;justify-content:space-between;align-items:center;width:90%;margin:auto;padding:12px 0}
-    .nav img{height:45px}
-    nav a{color:#a9b4bf;margin:0 12px;text-decoration:none;font-weight:600}
-    nav a:hover{color:#fff}
-    
-    .hero{padding:80px 20px;text-align:center;background:url('img/hero.jpg') center/cover no-repeat;position:relative}
-    .hero::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6)}
-    .hero-content{position:relative;z-index:1}
-    .hero h1{font-size:2.4rem;margin-bottom:15px}
-    .hero p{font-size:1.2rem;color:#cfd8e3;margin-bottom:25px}
-    .btn{display:inline-block;background:#25d366;color:#fff;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none}
-    .btn:hover{background:#20b659}
+    body{margin:0;font-family:'Montserrat',sans-serif;background:#0f141a;color:#eaf2f8}
+    header{background:#141b22;position:sticky;top:0;padding:10px 0;z-index:100;text-align:center}
+    header img{height:50px}
 
-    section{padding:60px 20px;text-align:center}
-    section h2{margin-bottom:10px;font-size:1.8rem}
-    section p{color:#a9b4bf}
+    .hero{padding:60px 20px;text-align:center;background:#18222c}
+    .hero h1{font-size:2rem;margin-bottom:10px}
+    .hero p{color:#a9b4bf}
+    .btn{display:inline-block;background:#25d366;color:#fff;padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;margin-top:15px}
+    .btn:hover{background:#1ebe5b}
 
-    /* Cards */
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
-    .card{background:#18222c;padding:20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.3)}
-    .card img{height:60px;margin-bottom:15px}
+    /* Cards principais */
+    .menu-cards {padding:40px 20px;text-align:center}
+    .menu-cards h2{margin-bottom:20px}
+    .menu-cards .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+    }
+    .menu-cards .card {
+      background: #18222c;
+      border-radius: 12px;
+      padding: 20px 10px;
+      text-decoration: none;
+      color: #eaf2f8;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-cards .card:hover {transform: translateY(-5px);background:#1f2c39}
+    .menu-cards img {height:40px;margin-bottom:10px}
 
-    /* Depoimentos */
-    .testimonials{background:#18222c;border-radius:12px;padding:30px;margin-top:30px}
-    .stars{color:#f1c40f;font-size:1.2rem;margin-bottom:10px}
-
-    /* Marcas */
-    .brands{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:20px}
-    .brands img{height:40px;filter:brightness(0) invert(1)}
-
-    /* Footer */
-    footer{background:#141b22;padding:30px;text-align:center;color:#a9b4bf;font-size:.9rem}
-    footer a{color:#25d366;text-decoration:none;font-weight:600}
+    footer{background:#141b22;padding:20px;text-align:center;color:#a9b4bf}
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN34973B"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Header -->
   <header>
-    <div class="nav">
-      <img src="img/logo.png" alt="Global Aquecedores">
-      <nav>
-        <a href="servicos.html">Serviços</a>
-        <a href="ofertas.html">Ofertas</a>
-        <a href="marcas.html">Marcas</a>
-        <a href="depoimentos.html">Depoimentos</a>
-        <a href="certificacoes.html">Certificações</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
+    <img src="img/logo.png" alt="Global Aquecedores">
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Aquecedores a Gás em Porto Alegre</h1>
-      <p>Instalação, manutenção e venda com segurança, agilidade e confiança.</p>
-      <a class="btn" href="https://wa.me/5551985519090" target="_blank">Fale no WhatsApp</a>
-    </div>
+    <h1>Aquecedores a Gás em Porto Alegre e Região</h1>
+    <p>Instalação, manutenção e venda com segurança, agilidade e confiança.</p>
+    <a class="btn" href="https://wa.me/5551985519090" target="_blank">Fale no WhatsApp</a>
   </section>
 
-  <!-- Serviços -->
-  <section>
-    <h2>Nossos Serviços</h2>
+  <!-- Cards de Navegação -->
+  <section class="menu-cards">
+    <h2>O que você procura?</h2>
     <div class="cards">
-      <div class="card"><img src="img/install.png" alt=""><h3>Instalação</h3><p>Equipe especializada para instalação segura e rápida.</p></div>
-      <div class="card"><img src="img/repair.png" alt=""><h3>Manutenção</h3><p>Assistência técnica confiável para todas as marcas.</p></div>
-      <div class="card"><img src="img/sale.png" alt=""><h3>Venda</h3><p>Modelos modernos com garantia e suporte completo.</p></div>
+      <a href="servicos.html" class="card">
+        <img src="img/icon-servicos.png" alt="Serviços">
+        <h3>Serviços</h3>
+      </a>
+      <a href="ofertas.html" class="card">
+        <img src="img/icon-ofertas.png" alt="Ofertas">
+        <h3>Ofertas</h3>
+      </a>
+      <a href="marcas.html" class="card">
+        <img src="img/icon-marcas.png" alt="Marcas">
+        <h3>Marcas</h3>
+      </a>
+      <a href="depoimentos.html" class="card">
+        <img src="img/icon-depoimentos.png" alt="Depoimentos">
+        <h3>Depoimentos</h3>
+      </a>
+      <a href="certificacoes.html" class="card">
+        <img src="img/icon-certificacoes.png" alt="Certificações">
+        <h3>Certificações</h3>
+      </a>
+      <a href="faq.html" class="card">
+        <img src="img/icon-faq.png" alt="FAQ">
+        <h3>FAQ</h3>
+      </a>
+      <a href="contato.html" class="card">
+        <img src="img/icon-contato.png" alt="Contato">
+        <h3>Contato</h3>
+      </a>
     </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section>
-    <h2>O que dizem nossos clientes</h2>
-    <div class="testimonials">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p>“Atendimento rápido e instalação perfeita, recomendo muito!” – João M.</p>
-    </div>
-    <div class="testimonials">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p>“Meu aquecedor voltou a funcionar como novo, excelente equipe.” – Ana C.</p>
-    </div>
-  </section>
-
-  <!-- Marcas -->
-  <section>
-    <h2>Marcas Parceiras</h2>
-    <div class="brands">
-      <img src="img/rinnai.png" alt="Rinnai">
-      <img src="img/lorenzetti.png" alt="Lorenzetti">
-      <img src="img/bosch.png" alt="Bosch">
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section>
-    <h2>Fale Conosco</h2>
-    <p>Solicite um orçamento agora mesmo pelo WhatsApp.</p>
-    <a class="btn" href="https://wa.me/5551985519090" target="_blank">Chamar no WhatsApp</a>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© <span id="year"></span> Global Aquecedores - Porto Alegre / RS</p>
-    <p>WhatsApp: <a href="https://wa.me/5551985519090">(51) 98551-9090</a></p>
   </footer>
 
   <script>
