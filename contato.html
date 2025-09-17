@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato | Global Aquecedores em Porto Alegre</title>
+  <meta name="description" content="Fale com a Global Aquecedores. Solicite orçamento de instalação, manutenção ou compra de aquecedores a gás em Porto Alegre e região metropolitana."/>
+
+  <link rel="canonical" href="https://www.globalaquecedores.agr.br/contato"/>
+  <link rel="icon" href="img/favicon.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{margin:0;font-family:'Montserrat',sans-serif;background:#0f141a;color:#eaf2f8}
+    header,footer{background:#141b22;padding:16px}
+    header nav a, footer a{color:#a9b4bf;text-decoration:none;margin:0 10px;font-weight:600}
+    header nav a:hover, footer a:hover{color:#fff}
+    .container{width:min(1100px,92%);margin:auto;padding:20px 0}
+    h1{font-size:2rem;margin-bottom:12px}
+    .card{background:#18222c;padding:20px;border-radius:14px}
+    input,textarea{width:100%;padding:12px;margin-top:10px;border-radius:10px;border:1px solid #333;background:#0d1319;color:#fff}
+    button{margin-top:10px;background:#ff7a00;color:#111;padding:12px 18px;border:none;border-radius:10px;font-weight:700;cursor:pointer}
+    button:hover{opacity:0.9}
+    .btn{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+    .btn-wpp{background:#25D366;color:#111}
+    .muted{color:#a9b4bf}
+    footer{color:#a9b4bf;text-align:center}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="marcas.html">Marcas</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a href="certificacoes.html">Certificações</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contato.html" style="color:#fff">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h1>Entre em Contato</h1>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div class="card">
+        <form id="form-contato">
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required/>
+          <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone/WhatsApp" required/>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte rapidamente como podemos ajudar" required></textarea>
+          <button type="submit">Enviar no WhatsApp</button>
+        </form>
+        <p class="muted" style="margin-top:10px">Preferir falar direto? <a href="tel:+5551985519090">Ligar: (51) 98551-9090</a></p>
+        <p class="muted">Instagram: <a href="https://instagram.com/_aquecedores1" target="_blank">@_aquecedores1</a></p>
+      </div>
+
+      <aside class="card">
+        <h2>Atendimento</h2>
+        <p class="muted">Porto Alegre e região metropolitana.</p>
+        <p class="muted">Seg–Sáb • 8h às 19h</p>
+        <ul style="margin-left:18px">
+          <li>Instalação dentro das normas</li>
+          <li>Manutenção preventiva e corretiva</li>
+          <li>Orçamento rápido pelo WhatsApp</li>
+        </ul>
+        <a class="btn btn-wpp" href="https://wa.me/5551985519090" target="_blank">Falar no WhatsApp</a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Global Aquecedores — Porto Alegre / RS</p>
+    <div>
+      <a href="https://wa.me/5551985519090" target="_blank">WhatsApp</a> |
+      <a href="https://instagram.com/_aquecedores1" target="_blank">Instagram</a> |
+      <a href="faq.html">FAQ</a>
+    </div>
+  </footer>
+
+  <script>
+    // Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form -> WhatsApp
+    const form = document.getElementById('form-contato');
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const tel = document.getElementById('telefone').value;
+      const msg = document.getElementById('mensagem').value;
+      const texto = `Olá, sou ${nome}. Telefone/WhatsApp: ${tel}. %0A%0A${msg}%0A%0AEnviado pelo site Global Aquecedores.`;
+      window.open(`https://wa.me/5551985519090?text=${texto}`,'_blank');
+    });
+  </script>
+</body>
+</html>
