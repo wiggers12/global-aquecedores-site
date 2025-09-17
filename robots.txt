@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://globalaquecedores.agr.br/sitemap.xml
-
+Sitemap: https://www.globalaquecedores.agr.br/sitemap.xml
