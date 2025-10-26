@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Global Aquecedores | Porto Alegre e Região</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17389745602"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,8 +13,6 @@
     gtag('js', new Date());
     gtag('config', 'AW-17389745602');
   </script>
-
-  <!-- Google Tag Manager -->
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -22,56 +20,106 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MN34973B');
   </script>
-  <!-- End GTM -->
 
   <meta name="description" content="Instalação, manutenção e venda de aquecedores a gás em Porto Alegre e região metropolitana. Atendimento rápido e seguro.">
   <link rel="canonical" href="https://globalaquecedores.agr.br/"/>
   <link rel="icon" href="img/favicon.png" type="image/png"/>
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body{margin:0;font-family:'Montserrat',sans-serif;background:#0f141a;color:#eaf2f8}
-    header{background:#141b22;position:sticky;top:0;padding:10px 0;z-index:100;text-align:center}
-    header img{height:50px}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    .hero{padding:60px 20px;text-align:center;background:#18222c}
-    .hero h1{font-size:2rem;margin-bottom:10px}
-    .hero p{color:#a9b4bf}
-    .btn{display:inline-block;background:#25d366;color:#fff;padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;margin-top:15px}
-    .btn:hover{background:#1ebe5b}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0e1318;
+      color: #eaf2f8;
+    }
+
+    header {
+      background: #10161b;
+      position: sticky;
+      top: 0;
+      padding: 10px 0;
+      z-index: 100;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    header img {height: 50px;}
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #16202a, #0f141a);
+    }
+    .hero h1 {font-size: 2rem; margin-bottom: 10px;}
+    .hero p {color: #9ea8b1;}
+    .btn {
+      display: inline-block;
+      background: #008fba;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 15px;
+      box-shadow: 0 0 10px rgba(0,143,186,0.4);
+      transition: 0.3s;
+    }
+    .btn:hover {background: #00a5d8; box-shadow: 0 0 20px rgba(0,143,186,0.6);}
 
     /* Cards principais */
-    .menu-cards {padding:40px 20px;text-align:center}
-    .menu-cards h2{margin-bottom:20px}
+    .menu-cards {padding: 40px 20px; text-align: center;}
+    .menu-cards h2 {margin-bottom: 25px; color: #00a5d8;}
     .menu-cards .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 20px;
     }
     .menu-cards .card {
       background: #18222c;
       border-radius: 12px;
-      padding: 20px 10px;
+      padding: 25px 15px;
       text-decoration: none;
       color: #eaf2f8;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
       transition: 0.3s;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .menu-cards .card:hover {transform: translateY(-5px);background:#1f2c39}
-    .menu-cards img {height:40px;margin-bottom:10px}
+    .menu-cards .card:hover {
+      background: #1f2d38;
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0,162,230,0.3);
+    }
 
-    footer{background:#141b22;padding:20px;text-align:center;color:#a9b4bf}
+    .menu-cards i {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: #00a5d8;
+      transition: 0.3s;
+    }
+    .menu-cards .card:hover i {color: #ffd95a;}
+
+    .menu-cards h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    footer {
+      background: #10161b;
+      padding: 20px;
+      text-align: center;
+      color: #9ea8b1;
+    }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN34973B"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Header -->
   <header>
@@ -89,34 +137,42 @@
   <section class="menu-cards">
     <h2>O que você procura?</h2>
     <div class="cards">
+
       <a href="servicos.html" class="card">
-        <img src="img/icon-servicos.png" alt="Serviços">
+        <i class="fa-solid fa-wrench"></i>
         <h3>Serviços</h3>
       </a>
+
       <a href="ofertas.html" class="card">
-        <img src="img/icon-ofertas.png" alt="Ofertas">
+        <i class="fa-solid fa-tags"></i>
         <h3>Ofertas</h3>
       </a>
+
       <a href="marcas.html" class="card">
-        <img src="img/icon-marcas.png" alt="Marcas">
+        <i class="fa-solid fa-fire"></i>
         <h3>Marcas</h3>
       </a>
+
       <a href="depoimentos.html" class="card">
-        <img src="img/icon-depoimentos.png" alt="Depoimentos">
+        <i class="fa-solid fa-comment-dots"></i>
         <h3>Depoimentos</h3>
       </a>
+
       <a href="certificacoes.html" class="card">
-        <img src="img/icon-certificacoes.png" alt="Certificações">
+        <i class="fa-solid fa-medal"></i>
         <h3>Certificações</h3>
       </a>
+
       <a href="faq.html" class="card">
-        <img src="img/icon-faq.png" alt="FAQ">
+        <i class="fa-solid fa-circle-question"></i>
         <h3>FAQ</h3>
       </a>
+
       <a href="contato.html" class="card">
-        <img src="img/icon-contato.png" alt="Contato">
+        <i class="fa-solid fa-phone"></i>
         <h3>Contato</h3>
       </a>
+
     </div>
   </section>
 
